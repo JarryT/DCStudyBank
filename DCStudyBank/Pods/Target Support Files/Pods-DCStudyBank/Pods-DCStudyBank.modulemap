@@ -1,0 +1,6 @@
+framework module Pods_DCStudyBank {
+  umbrella header "Pods-DCStudyBank-umbrella.h"
+
+  export *
+  module * { export * }
+}

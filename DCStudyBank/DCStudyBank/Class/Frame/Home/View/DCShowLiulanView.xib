@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DCShowLiulanView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Dg-gZ-z0H">
+                    <rect key="frame" x="0.0" y="845" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVq-Gl-KdD" customClass="SYButton">
+                            <rect key="frame" x="0.0" y="0.0" width="104" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" image="baitian_icon_a"/>
+                            <connections>
+                                <action selector="baiTainBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="0v4-H6-KUW"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6P-h8-Dbj" customClass="SYButton">
+                            <rect key="frame" x="207" y="0.0" width="104" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" image="txtadd_icon_n"/>
+                            <connections>
+                                <action selector="fontMax:" destination="iN0-l3-epB" eventType="touchUpInside" id="fPt-vx-2iN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buo-pI-183" customClass="SYButton">
+                            <rect key="frame" x="311" y="0.0" width="104" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" image="txtjianx_icon_n"/>
+                            <connections>
+                                <action selector="fontMile:" destination="iN0-l3-epB" eventType="touchUpInside" id="rDM-ub-94z"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6m5-Dd-cbt" customClass="SYButton">
+                            <rect key="frame" x="104" y="0.0" width="104" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" image="yejian_icon_n"/>
+                            <connections>
+                                <action selector="nightBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="WxI-M1-9wU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="buo-pI-183" secondAttribute="bottom" constant="10" id="0C9-85-TcP"/>
+                        <constraint firstItem="TVq-Gl-KdD" firstAttribute="leading" secondItem="7Dg-gZ-z0H" secondAttribute="leading" id="3J7-a2-VdK"/>
+                        <constraint firstItem="6m5-Dd-cbt" firstAttribute="height" secondItem="TVq-Gl-KdD" secondAttribute="height" id="Iti-Ce-oCy"/>
+                        <constraint firstItem="e6P-h8-Dbj" firstAttribute="leading" secondItem="6m5-Dd-cbt" secondAttribute="trailing" constant="-1" id="LV3-Po-EGi"/>
+                        <constraint firstAttribute="height" constant="50" id="Q9x-gR-fEw"/>
+                        <constraint firstItem="buo-pI-183" firstAttribute="leading" secondItem="e6P-h8-Dbj" secondAttribute="trailing" id="RAA-rK-k58"/>
+                        <constraint firstAttribute="bottom" secondItem="6m5-Dd-cbt" secondAttribute="bottom" constant="10" id="VkC-KL-D4Q"/>
+                        <constraint firstItem="e6P-h8-Dbj" firstAttribute="top" secondItem="7Dg-gZ-z0H" secondAttribute="top" id="XrV-RX-7cd"/>
+                        <constraint firstItem="TVq-Gl-KdD" firstAttribute="top" secondItem="7Dg-gZ-z0H" secondAttribute="top" id="bNo-Wx-6dW"/>
+                        <constraint firstItem="e6P-h8-Dbj" firstAttribute="height" secondItem="TVq-Gl-KdD" secondAttribute="height" id="cFI-qN-ubf"/>
+                        <constraint firstItem="e6P-h8-Dbj" firstAttribute="width" secondItem="TVq-Gl-KdD" secondAttribute="width" id="dky-l2-0uz"/>
+                        <constraint firstItem="6m5-Dd-cbt" firstAttribute="leading" secondItem="TVq-Gl-KdD" secondAttribute="trailing" id="e5H-iM-fU8"/>
+                        <constraint firstItem="6m5-Dd-cbt" firstAttribute="width" secondItem="TVq-Gl-KdD" secondAttribute="width" id="iOJ-ar-KGT"/>
+                        <constraint firstAttribute="trailing" secondItem="buo-pI-183" secondAttribute="trailing" constant="-1" id="j2e-cc-Veg"/>
+                        <constraint firstItem="buo-pI-183" firstAttribute="width" secondItem="TVq-Gl-KdD" secondAttribute="width" id="lDw-Ov-VCO"/>
+                        <constraint firstItem="buo-pI-183" firstAttribute="top" secondItem="7Dg-gZ-z0H" secondAttribute="top" id="m1Z-dO-SJg"/>
+                        <constraint firstItem="6m5-Dd-cbt" firstAttribute="top" secondItem="7Dg-gZ-z0H" secondAttribute="top" id="uNz-9I-mBt"/>
+                        <constraint firstItem="buo-pI-183" firstAttribute="height" secondItem="TVq-Gl-KdD" secondAttribute="height" id="xVR-Yf-V5l"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B09-Zr-wTs">
+                    <rect key="frame" x="0.0" y="895" width="414" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="EN4-qC-fu0"/>
+                    </constraints>
+                    <connections>
+                        <action selector="scanceClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="6vR-Ch-Guc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35L-Xk-bHS">
+                    <rect key="frame" x="0.0" y="44" width="414" height="801"/>
+                    <connections>
+                        <action selector="scanceClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="QOj-P6-VWk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="7Dg-gZ-z0H" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7qS-4Z-NKP"/>
+                <constraint firstItem="7Dg-gZ-z0H" firstAttribute="top" secondItem="35L-Xk-bHS" secondAttribute="bottom" id="9Ko-Gc-Q7m"/>
+                <constraint firstAttribute="bottom" secondItem="B09-Zr-wTs" secondAttribute="bottom" id="Arb-KE-zBU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="35L-Xk-bHS" secondAttribute="trailing" id="Cim-3O-Cvn"/>
+                <constraint firstItem="35L-Xk-bHS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Hn1-cD-nYI"/>
+                <constraint firstItem="B09-Zr-wTs" firstAttribute="top" secondItem="7Dg-gZ-z0H" secondAttribute="bottom" id="Hqr-Io-lO0"/>
+                <constraint firstItem="B09-Zr-wTs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TG6-4x-3dT"/>
+                <constraint firstItem="B09-Zr-wTs" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="edI-ck-SIy"/>
+                <constraint firstItem="35L-Xk-bHS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uPW-4O-N2K"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7Dg-gZ-z0H" secondAttribute="trailing" id="zis-61-kEg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="baiTianBtn" destination="TVq-Gl-KdD" id="4tu-Qy-QrU"/>
+                <outlet property="fontMax" destination="e6P-h8-Dbj" id="6jT-0f-zj0"/>
+                <outlet property="fontMil" destination="buo-pI-183" id="LqP-PU-Oo3"/>
+                <outlet property="wanSBtn" destination="6m5-Dd-cbt" id="2KL-03-ZrG"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="baitian_icon_a" width="22" height="22"/>
+        <image name="txtadd_icon_n" width="22" height="22"/>
+        <image name="txtjianx_icon_n" width="22" height="22"/>
+        <image name="yejian_icon_n" width="22" height="22"/>
+    </resources>
+</document>

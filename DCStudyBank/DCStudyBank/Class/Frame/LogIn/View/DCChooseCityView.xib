@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DCChooseCityView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixd-nl-Znk">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="backBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="tBc-g8-PAP"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFY-gB-RWW">
+                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="667"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v96-9f-WZA">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="667"/>
+                            <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="v96-9f-WZA" secondAttribute="bottom" id="ESX-cI-2ev"/>
+                        <constraint firstItem="v96-9f-WZA" firstAttribute="top" secondItem="CFY-gB-RWW" secondAttribute="top" id="Lae-Mp-HqR"/>
+                        <constraint firstAttribute="trailing" secondItem="v96-9f-WZA" secondAttribute="trailing" id="Snm-cB-2fm"/>
+                        <constraint firstItem="v96-9f-WZA" firstAttribute="leading" secondItem="CFY-gB-RWW" secondAttribute="leading" id="WgW-Ys-Kxn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ixd-nl-Znk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3Zi-Ou-aae"/>
+                <constraint firstItem="ixd-nl-Znk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="7CD-1L-HZZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CFY-gB-RWW" secondAttribute="trailing" id="aVx-K4-DFg"/>
+                <constraint firstItem="ixd-nl-Znk" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" id="bzZ-Ur-0cF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ixd-nl-Znk" secondAttribute="bottom" id="gGy-zC-7wY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CFY-gB-RWW" secondAttribute="bottom" id="rPX-3Z-OgP"/>
+                <constraint firstItem="CFY-gB-RWW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="sU1-Gz-G3m"/>
+                <constraint firstItem="CFY-gB-RWW" firstAttribute="leading" secondItem="ixd-nl-Znk" secondAttribute="trailing" id="xkQ-4p-D2I"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="tabV" destination="v96-9f-WZA" id="k6G-6V-Yqr"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="96.7016491754123"/>
+        </view>
+    </objects>
+</document>

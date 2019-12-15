@@ -1,0 +1,62 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - EBBannerView (1.1.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - IQKeyboardManager (6.3.0)
+  - Masonry (1.0.2)
+  - MBProgressHUD (1.1.0)
+  - MJRefresh (3.2.0)
+  - SDWebImage (5.0.6):
+    - SDWebImage/Core (= 5.0.6)
+  - SDWebImage/Core (5.0.6)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.2.1)
+  - EBBannerView (~> 1.1.0)
+  - FMDB (~> 2.7.2)
+  - IQKeyboardManager (~> 6.3.0)
+  - Masonry (~> 1.0.0)
+  - MBProgressHUD
+  - MJRefresh
+  - SDWebImage (~> 5.0.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - EBBannerView
+    - FMDB
+    - IQKeyboardManager
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  EBBannerView: 3d987535d0236c1f87c2b064267d94002c23dd1e
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  IQKeyboardManager: 2ca9d64893247556f53523dcd8d78641f0ba7c23
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
+
+PODFILE CHECKSUM: 9cf449331b4a06ed85d3d285c61c73920bbfc139
+
+COCOAPODS: 1.7.5

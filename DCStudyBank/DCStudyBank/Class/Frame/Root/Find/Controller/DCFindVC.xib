@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DCFindVC">
+            <connections>
+                <outlet property="timeLable" destination="Yv9-wP-Elk" id="JVI-9v-PXT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSY-Hf-1zf">
+                    <rect key="frame" x="0.0" y="44" width="375" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discover_daojishi_icon" translatesAutoresizingMaskIntoConstraints="NO" id="sW3-Qn-gGK">
+                            <rect key="frame" x="15" y="15" width="20" height="20"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="距考试倒计时28天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yv9-wP-Elk">
+                            <rect key="frame" x="40" y="16.5" width="117.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.086274509803921567" green="0.22352941179999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baokao_more_icon" translatesAutoresizingMaskIntoConstraints="NO" id="H1X-Qd-nYj">
+                            <rect key="frame" x="338" y="14" width="22" height="22"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2y1-81-nBJ">
+                            <rect key="frame" x="0.0" y="44" width="375" height="6"/>
+                            <connections>
+                                <action selector="timeBtnClick:" destination="-1" eventType="touchUpInside" id="HWa-Uf-kU6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="2GU-Ei-mTy"/>
+                        <constraint firstItem="Yv9-wP-Elk" firstAttribute="centerY" secondItem="sW3-Qn-gGK" secondAttribute="centerY" id="2gx-pA-cal"/>
+                        <constraint firstItem="H1X-Qd-nYj" firstAttribute="centerY" secondItem="VSY-Hf-1zf" secondAttribute="centerY" id="2he-gH-IN1"/>
+                        <constraint firstAttribute="trailing" secondItem="H1X-Qd-nYj" secondAttribute="trailing" constant="15" id="2rm-8o-KRJ"/>
+                        <constraint firstItem="2y1-81-nBJ" firstAttribute="leading" secondItem="VSY-Hf-1zf" secondAttribute="leading" id="54A-s4-0pG"/>
+                        <constraint firstItem="sW3-Qn-gGK" firstAttribute="leading" secondItem="VSY-Hf-1zf" secondAttribute="leading" constant="15" id="72d-Ut-BlJ"/>
+                        <constraint firstItem="2y1-81-nBJ" firstAttribute="centerX" secondItem="VSY-Hf-1zf" secondAttribute="centerX" id="GhX-Vd-8lc"/>
+                        <constraint firstItem="H1X-Qd-nYj" firstAttribute="centerY" secondItem="Yv9-wP-Elk" secondAttribute="centerY" id="HO7-pX-pGS"/>
+                        <constraint firstItem="Yv9-wP-Elk" firstAttribute="leading" secondItem="sW3-Qn-gGK" secondAttribute="trailing" constant="5" id="O3A-PM-Rib"/>
+                        <constraint firstAttribute="bottom" secondItem="2y1-81-nBJ" secondAttribute="bottom" id="QLw-No-Q9s"/>
+                        <constraint firstItem="Yv9-wP-Elk" firstAttribute="centerY" secondItem="sW3-Qn-gGK" secondAttribute="centerY" id="hV2-Tt-vwY"/>
+                        <constraint firstItem="2y1-81-nBJ" firstAttribute="top" secondItem="H1X-Qd-nYj" secondAttribute="bottom" constant="8" id="me1-22-Z8W"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VSY-Hf-1zf" firstAttribute="top" secondItem="lbr-Ok-PAq" secondAttribute="top" constant="44" id="F15-sd-8eU"/>
+                <constraint firstItem="VSY-Hf-1zf" firstAttribute="leading" secondItem="lbr-Ok-PAq" secondAttribute="leading" id="GjF-pV-2Rv"/>
+                <constraint firstItem="VSY-Hf-1zf" firstAttribute="trailing" secondItem="lbr-Ok-PAq" secondAttribute="trailing" id="XN5-rU-zr4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="lbr-Ok-PAq"/>
+            <point key="canvasLocation" x="140" y="90.404797601199405"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="baokao_more_icon" width="22" height="22"/>
+        <image name="discover_daojishi_icon" width="20" height="20"/>
+    </resources>
+</document>

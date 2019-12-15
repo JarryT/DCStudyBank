@@ -1,0 +1,48 @@
+
+//
+//  ItemBankPrefixHeader.pch
+//  ItemBank
+//
+//  Created by mac on 2019/11/24.
+//  Copyright © 2019 mac. All rights reserved.
+//
+
+#ifndef ItemBankPrefixHeader_pch
+#define ItemBankPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "DCItemSetAll.h"
+#import "DCItemMaic.h"
+#import "YaydUIView+Frame.h"
+#import "NSDictionary+Json.h"
+#import "UIColor+WYColorHex.h"
+#import "MJRefresh.h"
+#import "EBBannerView.h"
+#import "YaydUINavigationBar+handle.h"
+#import "UINavigationController+SSNavigationManager.h"
+#import "DCNavigationVC.h"
+#import "Masonry.h"
+#import "DCCountDownTime.h"
+#import "MJExtension.h"
+#import "DCItemMaic.h"
+#import "YaydTXSeperateLineCell.h"
+#import "MBProgressHUD+MJ.h"
+#import "YTCameraAndPhotoManager.h"
+#import "DCNetworkingRequest.h"
+#import "NSString+CCRegular.h"
+#import "IQKeyboardManager.h"
+#import "DCUerLoginManger.h"
+#import "DCUerLoginManger+DCUserReuest.h"
+#import "YaydNSString+Util.h"
+#import "AlertView.h"
+#import <SDWebImage/SDImageCache.h>
+#import <UIImageView+WebCache.h>
+#import "UIButton+WebCache.h"
+#endif
+
+#endif /* ItemBankPrefixHeader_pch */

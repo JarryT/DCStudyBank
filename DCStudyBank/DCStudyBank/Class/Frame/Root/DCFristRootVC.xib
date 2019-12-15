@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DCFristRootVC">
+            <connections>
+                <outlet property="btnBtoomY" destination="d7t-Po-R8T" id="EFz-vL-egh"/>
+                <outlet property="loginBtn" destination="G6R-vk-bgL" id="tga-gt-dby"/>
+                <outlet property="registBtn" destination="Y9i-q6-Bho" id="FMI-2q-Cz0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3x-RJ-N90">
+                    <rect key="frame" x="180" y="547" width="15" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="Ppm-pa-ogx"/>
+                        <constraint firstAttribute="height" constant="70" id="Q09-XG-06t"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9i-q6-Bho">
+                    <rect key="frame" x="30" y="563" width="150" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="LKY-cp-qe7"/>
+                        <constraint firstAttribute="height" constant="44" id="Wou-VF-ycK"/>
+                    </constraints>
+                    <state key="normal" title="注册">
+                        <color key="titleColor" red="0.0" green="0.75294117650000003" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="registBtnClick:" destination="-1" eventType="touchUpInside" id="sZr-0G-NlS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6R-vk-bgL">
+                    <rect key="frame" x="195" y="563" width="150" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.75294117650000003" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="ST5-Jd-YnZ"/>
+                        <constraint firstAttribute="height" constant="44" id="cGx-b5-6mo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="登录"/>
+                    <connections>
+                        <action selector="logInBtnClick:" destination="-1" eventType="touchUpInside" id="DAR-9K-kVc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="P3x-RJ-N90" firstAttribute="leading" secondItem="Y9i-q6-Bho" secondAttribute="trailing" id="Hvk-Qk-rz1"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="P3x-RJ-N90" secondAttribute="bottom" constant="50" id="Lv2-Cp-JoA"/>
+                <constraint firstItem="P3x-RJ-N90" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="RRe-xP-fRb"/>
+                <constraint firstItem="G6R-vk-bgL" firstAttribute="leading" secondItem="P3x-RJ-N90" secondAttribute="trailing" id="cxr-Zi-BVb"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="Y9i-q6-Bho" secondAttribute="bottom" constant="60" id="d7t-Po-R8T"/>
+                <constraint firstItem="G6R-vk-bgL" firstAttribute="centerY" secondItem="Y9i-q6-Bho" secondAttribute="centerY" id="kV8-QY-zC1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="138.40000000000001" y="124.58770614692655"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DCXYZhangJieTestVC">
+            <connections>
+                <outlet property="topView" destination="AyU-51-525" id="zRq-wU-Pez"/>
+                <outlet property="topViewH" destination="qZt-b5-CVb" id="tR2-kK-2RP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AyU-51-525">
+                    <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baokao_more_icon" translatesAutoresizingMaskIntoConstraints="NO" id="zus-1V-w1t">
+                            <rect key="frame" x="376" y="14" width="22" height="22"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUh-o4-24x">
+                            <rect key="frame" x="20" y="0.0" width="386" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="  继续上次学习" image="zhangjie_bqian">
+                                <color key="titleColor" red="0.0" green="0.75294117650000003" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="HUh-o4-24x" firstAttribute="leading" secondItem="AyU-51-525" secondAttribute="leading" constant="20" id="13H-o0-t8Z"/>
+                        <constraint firstAttribute="bottom" secondItem="HUh-o4-24x" secondAttribute="bottom" id="DdX-9M-ys4"/>
+                        <constraint firstItem="zus-1V-w1t" firstAttribute="centerY" secondItem="AyU-51-525" secondAttribute="centerY" id="OEm-LH-HPU"/>
+                        <constraint firstAttribute="trailing" secondItem="zus-1V-w1t" secondAttribute="trailing" constant="16" id="gi5-jg-NwI"/>
+                        <constraint firstAttribute="trailing" secondItem="HUh-o4-24x" secondAttribute="trailing" constant="8" id="nkX-zV-SLt"/>
+                        <constraint firstAttribute="height" constant="50" id="qZt-b5-CVb"/>
+                        <constraint firstItem="HUh-o4-24x" firstAttribute="top" secondItem="AyU-51-525" secondAttribute="top" id="yCj-LP-CqG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="AyU-51-525" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LUv-zb-mRM"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="AyU-51-525" secondAttribute="trailing" id="lRo-tx-Lr9"/>
+                <constraint firstItem="AyU-51-525" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="44" id="q7S-nf-u7y"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="139" y="100"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="baokao_more_icon" width="22" height="22"/>
+        <image name="zhangjie_bqian" width="34" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,17 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'DCStudyBank' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for DCStudyBank
+  pod 'FMDB', '~> 2.7.2'
+  pod 'SDWebImage','~>5.0.0'
+  pod 'AFNetworking', '~> 3.2.1'
+  pod 'Masonry', '~> 1.0.0'
+  pod 'IQKeyboardManager', '~> 6.3.0'
+  pod 'MBProgressHUD'
+  pod 'MJRefresh'
+  pod 'EBBannerView', '~> 1.1.0'
+end
