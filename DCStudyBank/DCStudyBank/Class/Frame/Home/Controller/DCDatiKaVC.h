@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,strong)NSArray<DCKaoDianObjModel *> *list;
 
+@property(nonatomic,assign)BOOL isAllCheck;//是否为全部解析
 @property(nonatomic,assign)Itemtype itemtype;
 @property(nonatomic,strong)NSString *keMuId;
 @property(nonatomic,strong)NSString *keMuName;

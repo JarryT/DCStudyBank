@@ -17,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet UIView *conetView;
 @property(nonatomic,strong)UIScrollView *scrllV;
 @property(nonatomic,assign)CGFloat conetH;
+@property (weak, nonatomic) IBOutlet UIButton *commit;
+
+
 @end
 
 @implementation DCDatiKaVC
@@ -28,6 +31,8 @@
     self.navView.titleLabel.textColor = [UIColor colorWithHexString:@"#222222"];
     self.navView.backView2.backgroundColor = [UIColor whiteColor];
     [self initWithConet];
+
+    [_commit setHidden:_isAllCheck];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -144,15 +149,18 @@
 
     weakSelf(self)
     [DCNetworkingRequest requestWithURLString:DddErrorItemsPath params:info method:POST withMappingObject:@"DCNetworkingReultModel" success:^(id  _Nonnull responseObject) {
-        DCDatiTestResultVC *vc = [[DCDatiTestResultVC alloc] init];
-        vc.itemtype = _itemtype;
-        vc.keMuId = _keMuId;
-        vc.keMuName = _keMuName;
-        vc.list = weakSelf.list;
-        [self.navigationController pushViewController:vc animated:YES];
+        [weakSelf pushToResult];
     } fail:^(NSError * _Nonnull error, NSString * _Nonnull errorDescription) {
-
     }];
 }
 
+
+- (void)pushToResult {
+    DCDatiTestResultVC *vc = [[DCDatiTestResultVC alloc] init];
+    vc.itemtype = _itemtype;
+    vc.keMuId = _keMuId;
+    vc.keMuName = _keMuName;
+    vc.list = _list;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 @end

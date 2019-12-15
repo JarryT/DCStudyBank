@@ -188,6 +188,7 @@
 - (IBAction)daTiKaBtnClick:(SYButton *)sender {
     
     DCDatiKaVC *VC = [[DCDatiKaVC alloc]init];
+    VC.isAllCheck = _isAllCheck;
     VC.list = _kaoDianList;
     VC.itemtype = _itemtype;
     VC.keMuId = _keMuId;
