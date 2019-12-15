@@ -175,6 +175,7 @@
 		04FE3139238AB980008FA7DD /* SYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE3124238AB980008FA7DD /* SYButton.m */; };
 		04FE313A238AB980008FA7DD /* XYCustomSting.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE3126238AB980008FA7DD /* XYCustomSting.m */; };
 		A61E85119F0504818A644BDD /* Pods_DCStudyBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94105C556EB95D62FA702E26 /* Pods_DCStudyBank.framework */; };
+		DF9EA23823A643A200617B6D /* DCDatiSectionFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9EA23723A643A200617B6D /* DCDatiSectionFooter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -468,6 +469,8 @@
 		4EDFDCC8D65756C4EDB7ACF8 /* Pods-DCStudyBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCStudyBank.release.xcconfig"; path = "Target Support Files/Pods-DCStudyBank/Pods-DCStudyBank.release.xcconfig"; sourceTree = "<group>"; };
 		6C6DBD49808A17F0F8694207 /* Pods-DCStudyBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCStudyBank.debug.xcconfig"; path = "Target Support Files/Pods-DCStudyBank/Pods-DCStudyBank.debug.xcconfig"; sourceTree = "<group>"; };
 		94105C556EB95D62FA702E26 /* Pods_DCStudyBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DCStudyBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF9EA23623A643A200617B6D /* DCDatiSectionFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCDatiSectionFooter.h; sourceTree = "<group>"; };
+		DF9EA23723A643A200617B6D /* DCDatiSectionFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCDatiSectionFooter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -881,6 +884,8 @@
 				04D4A12C23A509A400531160 /* DCShowLiulanView.h */,
 				04D4A12D23A509A400531160 /* DCShowLiulanView.m */,
 				04D4A12F23A509CF00531160 /* DCShowLiulanView.xib */,
+				DF9EA23623A643A200617B6D /* DCDatiSectionFooter.h */,
+				DF9EA23723A643A200617B6D /* DCDatiSectionFooter.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1029,6 +1034,7 @@
 		04FE30FE238AB980008FA7DD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DF9EA23523A6153500617B6D /* Timer */,
 				041406DF2393E3670034EED2 /* Model */,
 				04C3B6AF238D61FA0008B215 /* Controller */,
 				04C3B6B3238D61FB0008B215 /* View */,
@@ -1171,6 +1177,13 @@
 				4EDFDCC8D65756C4EDB7ACF8 /* Pods-DCStudyBank.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DF9EA23523A6153500617B6D /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Timer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1396,6 +1409,7 @@
 				041406D523937A150034EED2 /* UIBaseTableViewCell.m in Sources */,
 				04904C30238EAE9200DA65D0 /* NSObject+MJProperty.m in Sources */,
 				04B2AC512392568500A48758 /* DCMyNotionCenterVC.m in Sources */,
+				DF9EA23823A643A200617B6D /* DCDatiSectionFooter.m in Sources */,
 				04904C35238EAE9200DA65D0 /* MJFoundation.m in Sources */,
 				044DDB752396993200050AC4 /* DCNetworkingRequest.m in Sources */,
 				04C3B6A9238D61B70008B215 /* DCRegistrationInfoVC.m in Sources */,

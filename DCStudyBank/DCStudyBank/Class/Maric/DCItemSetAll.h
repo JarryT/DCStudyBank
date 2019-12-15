@@ -108,4 +108,16 @@
 #define LastLoginUserAccount @"LastLoginAccount"
 #define LastLoginUserPSW @"LastLoginPSW"
 #define LastLoginUserID @"LastLoginUserID"
+
+typedef NS_ENUM(NSUInteger, Itemtype) {
+    ItemtypeSingle,
+    ItemtypeDouble,
+};
+
+typedef NS_ENUM(NSUInteger, KaoDianCellType) {
+    KaoDianCellTypeNormal = 0,
+    KaoDianCellTypeAll,
+    KaoDianCellTypeError,
+};
+
 #endif /* DCItemSetAll_h */

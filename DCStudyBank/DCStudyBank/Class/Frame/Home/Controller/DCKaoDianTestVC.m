@@ -32,7 +32,7 @@
 @property (nonatomic, strong) UICollectionViewFlowLayout *layout;
 @property (weak, nonatomic) IBOutlet UILabel *kotiStatus;
 @property (weak, nonatomic) IBOutlet UILabel *kaotiNum;
-@property (nonatomic,strong)NSMutableArray *kaoDianList;
+
 @property (nonatomic) BOOL isStart;
 @property (nonatomic) BOOL isPause;
 @property (nonatomic) BOOL isCreat;
@@ -48,16 +48,36 @@
     // Do any additional setup after loading the view from its nib.
      self.navTitle = @"考点智能练习";
     self.navView.backBtn.hidden = YES;
-    UIButton *back = [[UIButton alloc]initWithFrame:CGRectMake(15, 7, 40, 30)];
+    UIButton *back = [[UIButton alloc] initWithFrame:CGRectMake(15, 7, 40, 30)];
     [back setImage:[UIImage imageNamed:@"navigation_back_w_icon"] forState:UIControlStateNormal];
     back.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [back addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
     [self.navView.backView2 addSubview:back];
-    _itemtype = @"单选";
+
+    _itemtype = ItemtypeDouble;
+
     [self initSetToolView];
     [self initWithPrepareLayout];
-    [self getKaoDianListData];
-    
+
+    if (_isAllCheck) {
+        [_toolBarView setHidden:true];
+
+        NSString *type = @"";
+        switch (_itemtype) {
+            case ItemtypeSingle:
+                type = @"单选";
+                break;
+            case ItemtypeDouble:
+                type = @"多选";
+                break;
+        }
+        _kotiStatus.text = type;
+        _kaotiNum.text = [NSString stringWithFormat:@"1/%lu", (unsigned long)_kaoDianList.count];
+        [_collectionV reloadData];
+    } else {
+        [_toolBarView setHidden:false];
+        [self getKaoDianListData];
+    }
 }
 
 
@@ -112,12 +132,25 @@
 //获取试题列表
 - (void)getKaoDianListData{
     weakSelf(self);
-    [DCNetworkingRequest requestWithURLString:KaoDianTestPath params:@{@"cortype":@"考点智能练习",@"pageSize":@(10),@"isRandom":@"1",@"itemtype":@"单选"} method:POST withMappingObject:@"DCKaoDianModel" success:^(DCKaoDianModel *responseObject) {
+
+    NSString *type = @"";
+    switch (_itemtype) {
+        case ItemtypeSingle:
+            type = @"单选";
+            break;
+        case ItemtypeDouble:
+            type = @"多选";
+            break;
+    }
+    [DCNetworkingRequest requestWithURLString:KaoDianTestPath params:@{@"cortype":_keMuName, @"pageSize":@(10),@"isRandom":@"1",@"itemtype":type} method:POST withMappingObject:@"DCKaoDianModel" success:^(DCKaoDianModel *responseObject) {
         if (responseObject.code == 200) {
             if (responseObject.obj.count > 0) {
-                [weakSelf.kaoDianList addObjectsFromArray:responseObject.obj];
-                weakSelf.kotiStatus.text = weakSelf.itemtype;
-                weakSelf.kaotiNum.text = [NSString stringWithFormat:@"1/%d",weakSelf.kaoDianList.count];
+                weakSelf.kaoDianList = responseObject.obj;
+                for (DCKaoDianObjModel *model in weakSelf.kaoDianList) {
+                    model.cellType = KaoDianCellTypeNormal;
+                }
+                weakSelf.kotiStatus.text = type;
+                weakSelf.kaotiNum.text = [NSString stringWithFormat:@"1/%lu",(unsigned long)weakSelf.kaoDianList.count];
                 weakSelf.colletM = weakSelf.kaoDianList.firstObject;
                 [weakSelf.collectionV reloadData];
                 [weakSelf startToCountTime];
@@ -158,6 +191,11 @@
 - (IBAction)daTiKaBtnClick:(SYButton *)sender {
     
     DCDatiKaVC *VC = [[DCDatiKaVC alloc]init];
+    VC.isAllCheck = _isAllCheck;
+    VC.list = _kaoDianList;
+    VC.itemtype = _itemtype;
+    VC.keMuId = _keMuId;
+    VC.keMuName = _keMuName;
     [self.navigationController pushViewController:VC animated:YES];
 }
 
@@ -219,15 +257,15 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     DCDaTiItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DCDaTiItemCellId forIndexPath:indexPath];
-    
-    cell.KaoDianModel = self.kaoDianList[indexPath.row];
+    cell.KaoDianModel = self.kaoDianList[indexPath.item];
+    [cell.tabV reloadData];
+    cell.tabV.userInteractionEnabled = !_isAllCheck;
     return cell;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
     
     return 0;
-    
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
@@ -239,13 +277,13 @@
     }else{
         self.collection.selected = NO;
     }
-    self.kaotiNum.text = [NSString stringWithFormat:@"%d/%d",self.indexPathNow.row+1,self.kaoDianList.count];
+    self.kaotiNum.text = [NSString stringWithFormat:@"%ld/%lu",self.indexPathNow.row+1,(unsigned long)self.kaoDianList.count];
 }
 
 #pragma lazy
-- (NSMutableArray *)kaoDianList{
+- (NSArray *)kaoDianList{
     if (!_kaoDianList) {
-        _kaoDianList = [NSMutableArray array];
+        _kaoDianList = [NSArray array];
     }
     return _kaoDianList;
 }
