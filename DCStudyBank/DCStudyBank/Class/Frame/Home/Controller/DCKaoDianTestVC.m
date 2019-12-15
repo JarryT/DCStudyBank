@@ -123,7 +123,7 @@
             type = @"多选";
             break;
     }
-    [DCNetworkingRequest requestWithURLString:KaoDianTestPath params:@{@"cortype":@"考点智能练习",@"pageSize":@(10),@"isRandom":@"1",@"itemtype":type} method:POST withMappingObject:@"DCKaoDianModel" success:^(DCKaoDianModel *responseObject) {
+    [DCNetworkingRequest requestWithURLString:KaoDianTestPath params:@{@"cortype":_keMuName, @"pageSize":@(10),@"isRandom":@"1",@"itemtype":type} method:POST withMappingObject:@"DCKaoDianModel" success:^(DCKaoDianModel *responseObject) {
         int i = 0;
         for (DCKaoDianObjModel *object in responseObject.obj) {
             object.itemname = [NSString stringWithFormat:@"%d -- %@", i,object.itemname];
@@ -175,6 +175,9 @@
 - (IBAction)daTiKaBtnClick:(SYButton *)sender {
     
     DCDatiKaVC *VC = [[DCDatiKaVC alloc]init];
+    VC.list = _kaoDianList;
+    VC.keMuId = _keMuId;
+    VC.keMuName = _keMuName;
     [self.navigationController pushViewController:VC animated:YES];
 }
 

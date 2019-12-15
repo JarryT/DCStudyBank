@@ -8,6 +8,8 @@
 
 #import "DCDatiKaVC.h"
 #import "DCDatiTestResultVC.h"
+#import "DCKaoDianModel.h"
+
 @interface DCDatiKaVC ()
 @property (weak, nonatomic) IBOutlet UIView *conetView;
 @property(nonatomic,strong)UIScrollView *scrllV;
@@ -48,7 +50,9 @@
     NSInteger number = 1;
            
     UIButton *lastBtn = nil;
-    for (int k = 0; k < 15; k++) {
+    for (int k = 0; k < _list.count; k++) {
+
+        DCKaoDianObjModel *model = _list[k];
         
         UIButton *btn = [UIButton buttonWithType:(UIButtonTypeSystem)];
                    
@@ -67,9 +71,17 @@
         btn.frame = CGRectMake(lastBtn == nil ? 20 : lastBtn.right + 40 > KScreenWidth ? 20 : lastBtn.right + 20, top, 30, 30);
         btn.layer.cornerRadius = 15;
         btn.layer.borderWidth = 1;
-        btn.layer.borderColor = [UIColor colorWithHexString:@"#AAAAAA" alpha:1].CGColor;
-        [btn setBackgroundColor:[UIColor whiteColor]];
-        [btn setTitleColor:[UIColor colorWithHexString:@"#222222" alpha:1] forState:UIControlStateNormal];
+
+        if (model.selectedOptionsList.count > 0) {
+            btn.layer.borderColor = [UIColor clearColor].CGColor;
+            [btn setBackgroundColor: KMainColor];
+            [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        } else {
+            btn.layer.borderColor = [UIColor colorWithHexString:@"#AAAAAA" alpha:1].CGColor;
+            [btn setBackgroundColor:[UIColor whiteColor]];
+            [btn setTitleColor:[UIColor colorWithHexString:@"#222222" alpha:1] forState:UIControlStateNormal];
+        }
+
         btn.titleLabel.font = KFont(14);
         NSInteger inde = k+1;
         [btn setTitle:[NSString stringWithFormat:@"%ld",inde] forState:UIControlStateNormal];
@@ -83,20 +95,53 @@
 }
 //确认提交
 - (IBAction)suerTijiaoBtnClick:(UIButton *)sender {
+
+    //判断每个题是否正确
+    NSMutableArray *erroritems = [NSMutableArray array];
+    int collectCount = 0;
+    int completeCount = 0;
+    for (DCKaoDianObjModel *model in _list) {
+        //1、
+        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+        dict[@"itemid"] = model.itemid;
+        //2、
+        if (model.selectedOptionsList.count > 0) {
+            NSMutableArray *answersOption = [NSMutableArray array];
+            for (DCKaoDianOptionsListModel *option in model.selectedOptionsList) {
+                [answersOption addObject:option.opname];
+            }
+            NSString *answers = [answersOption componentsJoinedByString:@","];
+            dict[@"erroption"] = answers;
+        } else {
+            dict[@"erroption"] = @"";
+        }
+        //3、
+        dict[@"corid"] = model.corid;
+        //4、
+        dict[@"errresult"] = [model isAnswerCorrect] ? @"正确" : @"错误";
+        if ([model isAnswerCorrect]) {
+            collectCount ++;
+        }
+        if (model.selectedOptionsList.count > 0) {
+            completeCount ++;
+        }
+        [erroritems addObject:dict];
+    }
     
+    NSMutableDictionary *exerReport = [NSMutableDictionary dictionary];
+    exerReport[@"exername"] = _keMuName;
+    exerReport[@"exertime"] = @"100";
+    exerReport[@"exercount"] = [NSString stringWithFormat:@"%lu",(unsigned long)_list.count];
+    NSString *count = [NSString stringWithFormat:@"%d", collectCount];
+    exerReport[@"exeraccuracy"] = [NSString stringWithFormat:@"%.2f", count.floatValue/_list.count];
+    exerReport[@"isaccomplish"] = (completeCount == _list.count) ? @"完成" : @"未完成";
+    exerReport[@"corid"] = _keMuId;
+
+    NSDictionary *info = @{@"exerReport": exerReport, @"erroritems": erroritems};
+
+
     DCDatiTestResultVC *vc = [[DCDatiTestResultVC alloc] init];
-    
     [self.navigationController pushViewController:vc animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

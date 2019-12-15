@@ -10,8 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class DCKaoDianObjModel;
 @interface DCDatiKaVC : YABaseViewController
 
+@property(nonatomic,strong)NSArray<DCKaoDianObjModel *> *list;
+@property(nonatomic,strong)NSString *keMuId;
+@property(nonatomic,strong)NSString *keMuName;
 @end
 
 NS_ASSUME_NONNULL_END

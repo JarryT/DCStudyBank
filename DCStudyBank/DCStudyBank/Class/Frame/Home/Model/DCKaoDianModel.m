@@ -35,6 +35,32 @@
     return self.selectedOptionsList.count > 0;
 }
 
+- (BOOL)isAnswerCorrect {
+    if ([self type] == ItemtypeSingle) {
+        if (self.selectedOptionsList.count == 1 && [self.selectedOptionsList.firstObject.opname isEqualToString:_itemresult]) {
+            return true;
+        }
+    } else if ([self type] == ItemtypeDouble) {
+        NSArray *results = [_itemresult componentsSeparatedByString:@","];
+        if (results.count == _selectedOptionsList.count) {
+            for ( DCKaoDianOptionsListModel *model in _selectedOptionsList) {
+                BOOL isThisAnswerCorect = false;
+                for (NSString *result in results) {
+                    if ([result isEqualToString: model.opname]) {
+                        isThisAnswerCorect = true;
+                        break;
+                    }
+                }
+                if (!isThisAnswerCorect) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+    return false;
+}
+
 - (NSMutableArray *)selectedOptionsList {
     if (!_selectedOptionsList) {
         _selectedOptionsList = [NSMutableArray array];

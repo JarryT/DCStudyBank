@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class DCKaoDianObjModel;
+@class DCKaoDianObjModel, DCKaoDianOptionsListModel;
 @interface DCKaoDianModel : DCNetworkingReultModel
 @property(nonatomic,strong)NSArray<DCKaoDianObjModel *> *obj;
 
@@ -33,8 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)NSString *itemresult;
 @property(nonatomic,strong)NSString *itemscore;
 @property(nonatomic,strong)NSString *itemtype;
-@property(nonatomic,strong)NSArray *optionsList;//选项数组
-@property(nonatomic,strong)NSMutableArray *selectedOptionsList;//选择的数组
+@property(nonatomic,strong)NSArray<DCKaoDianOptionsListModel *> *optionsList;//选项数组
+@property(nonatomic,strong)NSMutableArray<DCKaoDianOptionsListModel *> *selectedOptionsList;//选择的数组
 @property(nonatomic,strong)NSString *subid;
 @property(nonatomic,assign)BOOL isCollect;
 @property(nonatomic,strong)NSString *isZhengQue; //0错误，1正确，2未答题
@@ -42,6 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (Itemtype)type;
 - (BOOL)isSelected;
+- (BOOL)isAnswerCorrect;
 @end
 
 @interface DCKaoDianOptionsListModel : NSObject
