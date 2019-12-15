@@ -174,8 +174,14 @@
 - (void)menuItemBtnClickWith:(NSInteger)type{
     switch (type) {
         case 0:{//0考点智能
-            
+            if (_keMuId == nil) {
+                //提示错误;
+                return;
+            }
             DCKaoDianTestVC *vc = [DCKaoDianTestVC new];
+            vc.itemtype = ItemtypeSingle;
+            vc.keMuId = _keMuId;
+            vc.keMuName = @"考点智能练习";
             [self.navigationController pushViewController:vc animated:YES];
         }break;
         case 1:{//章节练习
