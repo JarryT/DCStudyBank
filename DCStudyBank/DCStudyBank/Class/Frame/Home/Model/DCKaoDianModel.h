@@ -37,6 +37,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)BOOL isCollect;
 @property(nonatomic,strong)NSString *isZhengQue; //0错误，1正确，2未答题
 @property(nonatomic,strong)NSString *userAnwer;
+
+//收藏列表的时间
+@property (nonatomic, copy) NSString * colldate;
+//收藏的高
+@property (nonatomic, assign) CGFloat height;
+
+
 @end
 
 @interface DCKaoDianOptionsListModel : NSObject
@@ -46,7 +53,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)NSString *opname;
 @property(nonatomic,strong)NSString *oppoint;
 @property(nonatomic,strong)NSString *opvalue;
-
 @end
 
 NS_ASSUME_NONNULL_END

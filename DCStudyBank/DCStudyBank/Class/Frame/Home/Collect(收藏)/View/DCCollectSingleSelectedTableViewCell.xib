@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="184" id="KGk-i7-Jjw" customClass="DCCollectSingleSelectedTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="187"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="187"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tw5-Ah-gTt">
+                        <rect key="frame" x="20" y="15" width="30.5" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iS-Ml-5PU">
+                        <rect key="frame" x="20" y="37" width="363" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPV-PH-SzY">
+                        <rect key="frame" x="20" y="59" width="363" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4f-Ud-0Pc">
+                        <rect key="frame" x="20" y="81" width="363" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhA-sU-HOO">
+                        <rect key="frame" x="20" y="103" width="30.5" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGN-Bd-fEP">
+                        <rect key="frame" x="20" y="147" width="30.5" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0l-Gm-V5a">
+                        <rect key="frame" x="20" y="125" width="30.5" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="J4f-Ud-0Pc" secondAttribute="trailing" constant="10" id="8ZO-so-VmP"/>
+                    <constraint firstItem="tw5-Ah-gTt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="CI2-Uq-bkd"/>
+                    <constraint firstItem="KPV-PH-SzY" firstAttribute="top" secondItem="5iS-Ml-5PU" secondAttribute="bottom" constant="5" id="D1c-yX-8BF"/>
+                    <constraint firstItem="KPV-PH-SzY" firstAttribute="leading" secondItem="5iS-Ml-5PU" secondAttribute="leading" id="DP8-6C-BrI"/>
+                    <constraint firstItem="5iS-Ml-5PU" firstAttribute="top" secondItem="tw5-Ah-gTt" secondAttribute="bottom" constant="5" id="HZf-yd-cUu"/>
+                    <constraint firstItem="5iS-Ml-5PU" firstAttribute="leading" secondItem="tw5-Ah-gTt" secondAttribute="leading" id="Nid-TD-dRK"/>
+                    <constraint firstAttribute="trailing" secondItem="5iS-Ml-5PU" secondAttribute="trailing" constant="10" id="Q4o-mQ-gEb"/>
+                    <constraint firstItem="tw5-Ah-gTt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Sho-bc-pXS"/>
+                    <constraint firstItem="hhA-sU-HOO" firstAttribute="leading" secondItem="J4f-Ud-0Pc" secondAttribute="leading" id="WbW-PP-cqp"/>
+                    <constraint firstItem="J4f-Ud-0Pc" firstAttribute="top" secondItem="KPV-PH-SzY" secondAttribute="bottom" constant="5" id="WeG-76-Zgi"/>
+                    <constraint firstAttribute="trailing" secondItem="KPV-PH-SzY" secondAttribute="trailing" constant="10" id="Xau-K0-JuT"/>
+                    <constraint firstItem="m0l-Gm-V5a" firstAttribute="leading" secondItem="hhA-sU-HOO" secondAttribute="leading" id="bbW-wQ-EJT"/>
+                    <constraint firstItem="xGN-Bd-fEP" firstAttribute="leading" secondItem="hhA-sU-HOO" secondAttribute="leading" id="btB-xJ-9mh"/>
+                    <constraint firstItem="hhA-sU-HOO" firstAttribute="top" secondItem="J4f-Ud-0Pc" secondAttribute="bottom" constant="5" id="c2a-zS-d0p"/>
+                    <constraint firstItem="J4f-Ud-0Pc" firstAttribute="leading" secondItem="KPV-PH-SzY" secondAttribute="leading" id="ir6-u1-s1N"/>
+                    <constraint firstItem="xGN-Bd-fEP" firstAttribute="top" secondItem="m0l-Gm-V5a" secondAttribute="bottom" constant="5" id="oKR-XO-C4y"/>
+                    <constraint firstItem="m0l-Gm-V5a" firstAttribute="top" secondItem="hhA-sU-HOO" secondAttribute="bottom" constant="5" id="r5i-rc-UAW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="aLabel" destination="KPV-PH-SzY" id="hOd-NM-umf"/>
+                <outlet property="bLabel" destination="J4f-Ud-0Pc" id="tbx-LJ-zHl"/>
+                <outlet property="cLabel" destination="hhA-sU-HOO" id="URL-ap-4px"/>
+                <outlet property="dLabel" destination="m0l-Gm-V5a" id="smc-jb-4qQ"/>
+                <outlet property="nameLabel" destination="5iS-Ml-5PU" id="NF3-zH-IlZ"/>
+                <outlet property="timeLabel" destination="xGN-Bd-fEP" id="yPc-fA-xN6"/>
+                <outlet property="titleLabel" destination="tw5-Ah-gTt" id="rhB-uX-exC"/>
+            </connections>
+            <point key="canvasLocation" x="96.376811594202906" y="85.044642857142847"/>
+        </tableViewCell>
+    </objects>
+</document>

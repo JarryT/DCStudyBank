@@ -39,7 +39,7 @@
     _latView.hidden = YES;
     _latView.bounds = self.view.bounds;
     _latView.btnBlock = ^(NSString * _Nonnull content, NSInteger index) {
-        
+        [weakSelf showLatview];
     };
     [self.view addSubview:_latView];
      

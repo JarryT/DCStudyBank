@@ -48,6 +48,10 @@ typedef NS_OPTIONS(NSInteger, HTTPMethod){
                      withMappingObject:(NSString*)className success:(void (^)(id responseObject))sucessBlock
                         fail:(void (^)(NSError *error, NSString *errorDescription))failBlock;
 
++ (void)postString:(NSString *)URLString params:(NSDictionary *)params withMappingObject:(NSString*)className success:(void (^)(id responseObject))sucessBlock
+              fail:(void (^)(NSError *error, NSString *errorDescription))failBlock;
+
+
 - (instancetype)initWithUrl:(NSString *)URLString;
 //修改请求参数
 - (void)setParameter:(NSDictionary *)parameter;

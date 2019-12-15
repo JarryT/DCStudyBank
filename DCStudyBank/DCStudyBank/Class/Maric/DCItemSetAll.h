@@ -49,7 +49,7 @@
 
 //************字体大小***/
 #define KFont(X) [UIFont systemFontOfSize:X];
-
+#define PF_R_Font(f) [UIFont fontWithName:@"PingFangSC-Regular" size:(f)]
 
 //*******/////*********网络相关*******************
 #define ServerAddressURL @"http://106.12.138.244:8080/"
@@ -94,9 +94,11 @@
 //智能考点练习
 #define KaoDianTestPath @"itemController/queryItemList/"
 //新增试题收藏
-#define AddCollectPath @"collectController/deleteCollect/"
+#define AddCollectPath @"collectController/addCollect/"
 //取消收藏
 #define DeleteCollectPath @"collectController/deleteCollect/"
+//查询收藏
+#define CollectQueryPath @"collectController/queryCollect"
 //保存用户****************卢金
 #define UserHeaderIconPlaceholderImage [UIImage imageNamed:@"my_head_icon"]
 ///保存用户登录数据路径
