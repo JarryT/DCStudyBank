@@ -32,7 +32,7 @@
 @property (nonatomic, strong) UICollectionViewFlowLayout *layout;
 @property (weak, nonatomic) IBOutlet UILabel *kotiStatus;
 @property (weak, nonatomic) IBOutlet UILabel *kaotiNum;
-@property (nonatomic,strong)NSMutableArray *kaoDianList;
+
 @property (nonatomic) BOOL isStart;
 @property (nonatomic) BOOL isPause;
 @property (nonatomic) BOOL isCreat;
@@ -48,17 +48,36 @@
     // Do any additional setup after loading the view from its nib.
      self.navTitle = @"考点智能练习";
     self.navView.backBtn.hidden = YES;
-    UIButton *back = [[UIButton alloc]initWithFrame:CGRectMake(15, 7, 40, 30)];
+    UIButton *back = [[UIButton alloc] initWithFrame:CGRectMake(15, 7, 40, 30)];
     [back setImage:[UIImage imageNamed:@"navigation_back_w_icon"] forState:UIControlStateNormal];
     back.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [back addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
     [self.navView.backView2 addSubview:back];
 
     _itemtype = ItemtypeDouble;
+
     [self initSetToolView];
     [self initWithPrepareLayout];
-    [self getKaoDianListData];
-    
+
+    if (_isAllCheck) {
+        [_toolBarView setHidden:true];
+
+        NSString *type = @"";
+        switch (_itemtype) {
+            case ItemtypeSingle:
+                type = @"单选";
+                break;
+            case ItemtypeDouble:
+                type = @"多选";
+                break;
+        }
+        _kotiStatus.text = type;
+        _kaotiNum.text = [NSString stringWithFormat:@"1/%lu", (unsigned long)_kaoDianList.count];
+        [_collectionV reloadData];
+    } else {
+        [_toolBarView setHidden:false];
+        [self getKaoDianListData];
+    }
 }
 
 
@@ -124,17 +143,11 @@
             break;
     }
     [DCNetworkingRequest requestWithURLString:KaoDianTestPath params:@{@"cortype":_keMuName, @"pageSize":@(10),@"isRandom":@"1",@"itemtype":type} method:POST withMappingObject:@"DCKaoDianModel" success:^(DCKaoDianModel *responseObject) {
-        int i = 0;
-        for (DCKaoDianObjModel *object in responseObject.obj) {
-            object.itemname = [NSString stringWithFormat:@"%d -- %@", i,object.itemname];
-            i++;
-            NSLog(@"%@",object.itemname);
-        }
         if (responseObject.code == 200) {
             if (responseObject.obj.count > 0) {
-                [weakSelf.kaoDianList addObjectsFromArray:responseObject.obj];
+                weakSelf.kaoDianList = responseObject.obj;
                 weakSelf.kotiStatus.text = type;
-                weakSelf.kaotiNum.text = [NSString stringWithFormat:@"1/%d",weakSelf.kaoDianList.count];
+                weakSelf.kaotiNum.text = [NSString stringWithFormat:@"1/%lu",(unsigned long)weakSelf.kaoDianList.count];
                 weakSelf.colletM = weakSelf.kaoDianList.firstObject;
                 [weakSelf.collectionV reloadData];
                 [weakSelf startToCountTime];
@@ -176,6 +189,7 @@
     
     DCDatiKaVC *VC = [[DCDatiKaVC alloc]init];
     VC.list = _kaoDianList;
+    VC.itemtype = _itemtype;
     VC.keMuId = _keMuId;
     VC.keMuName = _keMuName;
     [self.navigationController pushViewController:VC animated:YES];

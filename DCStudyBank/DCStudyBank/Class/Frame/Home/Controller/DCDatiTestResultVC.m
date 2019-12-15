@@ -8,6 +8,7 @@
 
 #import "DCDatiTestResultVC.h"
 #import "CircleProgressView.h"
+#import "DCKaoDianTestVC.h"
 
 @interface DCDatiTestResultVC ()
 @property (weak, nonatomic) IBOutlet UILabel *titlNa;
@@ -46,9 +47,12 @@
         }
     }
 
+    _circleProgreV.centerLabel.text = [NSString stringWithFormat:@"%d",collectCount];
+    _circleProgreV.centerTitleName.text = [NSString stringWithFormat:@"共%lu道", (unsigned long)_list.count];
+
     _titlNa.layer.cornerRadius = 10;
     _titlNa.layer.masksToBounds = YES;
-    _circleProgreV.percent = 0.3;
+    _circleProgreV.percent = _circleProgreV.centerLabel.text.floatValue/ _list.count;
     _circleProgreV.backgroundColor = [UIColor clearColor];
     _circleProgreV.progressBackgroundColor = [UIColor colorWithHexString:@"#F2F2F2" alpha:1];
     _circleProgreV.progressColor = KMainColor;
@@ -57,8 +61,7 @@
     _circleProgreV.textColor = KMainColor;
     _circleProgreV.subTextFont = KFont(11);
     _circleProgreV.subTextColor = KTextColor;
-    self.circleProgreV.centerLabel.text = [NSString stringWithFormat:@"%d",collectCount];
-    _circleProgreV.centerTitleName.text = [NSString stringWithFormat:@"共%lu道", (unsigned long)_list.count];
+
     _cheackAllJxBtn.layer.cornerRadius = 20;
     _cheackAllJxBtn.layer.masksToBounds = YES;
     _cheackWoringBtn.layer.cornerRadius = 20;
@@ -135,7 +138,14 @@
 
 //查看所有解析
 - (IBAction)cheackAllJxBtnClick:(UIButton *)sender {
-    
+
+    DCKaoDianTestVC *vc = [[DCKaoDianTestVC alloc] init];
+    vc.isAllCheck = true;
+    vc.itemtype = _itemtype;
+    vc.keMuName = _keMuName;
+    vc.keMuId = _keMuId;
+    vc.kaoDianList = _list;
+    [self.navigationController pushViewController:vc animated:true];
 }
 
 //查看错误

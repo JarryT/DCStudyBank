@@ -145,6 +145,9 @@
     weakSelf(self)
     [DCNetworkingRequest requestWithURLString:DddErrorItemsPath params:info method:POST withMappingObject:@"DCNetworkingReultModel" success:^(id  _Nonnull responseObject) {
         DCDatiTestResultVC *vc = [[DCDatiTestResultVC alloc] init];
+        vc.itemtype = _itemtype;
+        vc.keMuId = _keMuId;
+        vc.keMuName = _keMuName;
         vc.list = weakSelf.list;
         [self.navigationController pushViewController:vc animated:YES];
     } fail:^(NSError * _Nonnull error, NSString * _Nonnull errorDescription) {
