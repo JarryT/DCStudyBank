@@ -99,6 +99,10 @@
 #define DeleteCollectPath @"collectController/deleteCollect/"
 //查询收藏
 #define CollectQueryPath @"collectController/queryCollect"
+//查询错题
+#define ErrorQueryPath @"itemController/queryErrorItems"
+//查询所有报告
+#define AllResultQueryPath @"itemController/queryExerciseReport"
 //保存用户****************卢金
 #define UserHeaderIconPlaceholderImage [UIImage imageNamed:@"my_head_icon"]
 ///保存用户登录数据路径

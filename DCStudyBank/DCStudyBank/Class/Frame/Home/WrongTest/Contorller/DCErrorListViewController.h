@@ -1,5 +1,5 @@
 //
-//  DCCollectAnswerListItemTableViewCell.h
+//  DCErrorListViewController.h
 //  DCStudyBank
 //
 //  Created by fillinse on 2019/12/15.
@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DCKaoDianModel.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DCCollectAnswerListItemTableViewCell : UITableViewCell
-- (void)configWithModel:(DCKaoDianObjModel *)model;
+@interface DCErrorListViewController : YABaseViewController
+
 @end
 
 NS_ASSUME_NONNULL_END

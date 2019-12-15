@@ -1,5 +1,5 @@
 //
-//  DCCollectAnswerListItemTableViewCell.h
+//  DCItemToolView.h
 //  DCStudyBank
 //
 //  Created by fillinse on 2019/12/15.
@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DCKaoDianModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DCCollectAnswerListItemTableViewCell : UITableViewCell
-- (void)configWithModel:(DCKaoDianObjModel *)model;
+@interface DCItemToolView : UIView
+- (instancetype)initWithFrame:(CGRect)frame items:(NSArray *)array result:(void(^)(int type))result;
 @end
 
 NS_ASSUME_NONNULL_END
