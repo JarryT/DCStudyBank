@@ -256,13 +256,13 @@
     DCDaTiItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DCDaTiItemCellId forIndexPath:indexPath];
     cell.KaoDianModel = self.kaoDianList[indexPath.item];
     [cell.tabV reloadData];
+    cell.tabV.userInteractionEnabled = !_isAllCheck;
     return cell;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
     
     return 0;
-    
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {

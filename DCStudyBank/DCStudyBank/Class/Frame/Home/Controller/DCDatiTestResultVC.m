@@ -68,6 +68,10 @@
     _cheackWoringBtn.layer.masksToBounds = YES;
 
     [self setUpUI];
+
+    [self.navView handleItemClickBlock:^(BRBaseNavgationViewType type) {
+        [self.navigationController popToRootViewControllerAnimated:true];
+    }];
 }
 
 - (void)setUpUI {

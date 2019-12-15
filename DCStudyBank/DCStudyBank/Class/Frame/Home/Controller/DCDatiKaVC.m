@@ -33,6 +33,13 @@
     [self initWithConet];
 
     [_commit setHidden:_isAllCheck];
+    [self.navView handleItemClickBlock:^(BRBaseNavgationViewType type) {
+        AlertView *alt = [[AlertView alloc] initWithIconName:@"" title:@"提示" content:@"确定要退出？" isSingleAction:NO cancelBlock:^{
+            } doneBlock:^{
+                [self.navigationController popViewControllerAnimated:true];
+        }];
+        [alt showTo:self.navigationController.view];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -147,6 +154,19 @@
 
     NSDictionary *info = @{@"exerReport": [exerReport mj_JSONString], @"erroritems": [erroritems mj_JSONString]};
 
+    //提示
+    if (completeCount < _list.count) {
+        AlertView *alt = [[AlertView alloc] initWithIconName:@"" title:@"提示" content:@"你还有题目未做完, 确定交卷么？" isSingleAction:NO cancelBlock:^{
+            } doneBlock:^{
+                [self commitRequest:info];
+        }];
+        [alt showTo:self.navigationController.view];
+    } else {
+        [self commitRequest:info];
+    }
+}
+
+- (void)commitRequest:(NSDictionary *)info {
     weakSelf(self)
     [DCNetworkingRequest requestWithURLString:DddErrorItemsPath params:info method:POST withMappingObject:@"DCNetworkingReultModel" success:^(id  _Nonnull responseObject) {
         [weakSelf pushToResult];
