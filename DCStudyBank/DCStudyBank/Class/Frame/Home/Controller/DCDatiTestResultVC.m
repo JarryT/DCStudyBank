@@ -167,12 +167,17 @@
         }
     }
 
+    if (errorsModel.count == 0) {
+        //提示用户无错误
+        return;
+    }
+
     DCKaoDianTestVC *vc = [[DCKaoDianTestVC alloc] init];
     vc.isAllCheck = true;
     vc.itemtype = _itemtype;
     vc.keMuName = _keMuName;
     vc.keMuId = _keMuId;
-    vc.kaoDianList = temp;
+    vc.kaoDianList = errorsModel;
     [self.navigationController pushViewController:vc animated:true];
 }
 
