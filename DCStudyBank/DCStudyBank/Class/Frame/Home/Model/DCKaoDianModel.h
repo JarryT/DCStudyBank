@@ -44,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (Itemtype)type;
 - (BOOL)isSelected;
 - (BOOL)isAnswerCorrect;
-
+- (BOOL)isOptionCorrect:(DCKaoDianOptionsListModel *)option;
 @end
 
 @interface DCKaoDianOptionsListModel : NSObject

@@ -61,6 +61,18 @@
     return false;
 }
 
+- (BOOL)isOptionCorrect:(DCKaoDianOptionsListModel *)option {
+    NSArray *results = [_itemresult componentsSeparatedByString:@","];
+    BOOL isThisAnswerCorect = false;
+    for (NSString *result in results) {
+        if ([result isEqualToString: option.opname]) {
+            isThisAnswerCorect = true;
+            break;
+        }
+    }
+    return isThisAnswerCorect;
+}
+
 - (CGFloat)footerHeight {
     if (!_footerHeight) {
         _footerHeight = [self.itemjiexi boundingRectWithSize:CGSizeMake(KScreenWidth - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:nil context:nil].size.height + 125;

@@ -277,13 +277,13 @@
     }else{
         self.collection.selected = NO;
     }
-    self.kaotiNum.text = [NSString stringWithFormat:@"%d/%d",self.indexPathNow.row+1,self.kaoDianList.count];
+    self.kaotiNum.text = [NSString stringWithFormat:@"%ld/%lu",self.indexPathNow.row+1,(unsigned long)self.kaoDianList.count];
 }
 
 #pragma lazy
-- (NSMutableArray *)kaoDianList{
+- (NSArray *)kaoDianList{
     if (!_kaoDianList) {
-        _kaoDianList = [NSMutableArray array];
+        _kaoDianList = [NSArray array];
     }
     return _kaoDianList;
 }

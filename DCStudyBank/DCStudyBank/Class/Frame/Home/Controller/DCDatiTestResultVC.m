@@ -157,15 +157,22 @@
 
 //查看错误
 - (IBAction)cheackWrongBtnClick:(UIButton *)sender {
+
+    NSArray *temp = [_list copy];
+    NSMutableArray *errorsModel = [NSMutableArray array];
+    for (DCKaoDianObjModel *model in temp) {
+        if (model.selectedOptionsList.count > 0 && ![model isAnswerCorrect]) {
+            model.cellType = KaoDianCellTypeError;
+            [errorsModel addObject:model];
+        }
+    }
+
     DCKaoDianTestVC *vc = [[DCKaoDianTestVC alloc] init];
     vc.isAllCheck = true;
     vc.itemtype = _itemtype;
     vc.keMuName = _keMuName;
     vc.keMuId = _keMuId;
-    vc.kaoDianList = _list;
-    for (DCKaoDianObjModel *model in vc.kaoDianList) {
-        model.cellType = KaoDianCellTypeError;
-    }
+    vc.kaoDianList = temp;
     [self.navigationController pushViewController:vc animated:true];
 }
 
