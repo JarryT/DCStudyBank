@@ -53,7 +53,8 @@
     back.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [back addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
     [self.navView.backView2 addSubview:back];
-    _itemtype = @"单选";
+
+    _itemtype = ItemtypeDouble;
     [self initSetToolView];
     [self initWithPrepareLayout];
     [self getKaoDianListData];
@@ -112,11 +113,27 @@
 //获取试题列表
 - (void)getKaoDianListData{
     weakSelf(self);
-    [DCNetworkingRequest requestWithURLString:KaoDianTestPath params:@{@"cortype":@"考点智能练习",@"pageSize":@(10),@"isRandom":@"1",@"itemtype":@"单选"} method:POST withMappingObject:@"DCKaoDianModel" success:^(DCKaoDianModel *responseObject) {
+
+    NSString *type = @"";
+    switch (_itemtype) {
+        case ItemtypeSingle:
+            type = @"单选";
+            break;
+        case ItemtypeDouble:
+            type = @"多选";
+            break;
+    }
+    [DCNetworkingRequest requestWithURLString:KaoDianTestPath params:@{@"cortype":@"考点智能练习",@"pageSize":@(10),@"isRandom":@"1",@"itemtype":type} method:POST withMappingObject:@"DCKaoDianModel" success:^(DCKaoDianModel *responseObject) {
+        int i = 0;
+        for (DCKaoDianObjModel *object in responseObject.obj) {
+            object.itemname = [NSString stringWithFormat:@"%d -- %@", i,object.itemname];
+            i++;
+            NSLog(@"%@",object.itemname);
+        }
         if (responseObject.code == 200) {
             if (responseObject.obj.count > 0) {
                 [weakSelf.kaoDianList addObjectsFromArray:responseObject.obj];
-                weakSelf.kotiStatus.text = weakSelf.itemtype;
+                weakSelf.kotiStatus.text = type;
                 weakSelf.kaotiNum.text = [NSString stringWithFormat:@"1/%d",weakSelf.kaoDianList.count];
                 weakSelf.colletM = weakSelf.kaoDianList.firstObject;
                 [weakSelf.collectionV reloadData];
@@ -219,8 +236,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     DCDaTiItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DCDaTiItemCellId forIndexPath:indexPath];
-    
-    cell.KaoDianModel = self.kaoDianList[indexPath.row];
+    cell.KaoDianModel = self.kaoDianList[indexPath.item];
+    [cell.tabV reloadData];
     return cell;
 }
 

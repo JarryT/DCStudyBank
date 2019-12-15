@@ -104,4 +104,10 @@
 #define LastLoginUserAccount @"LastLoginAccount"
 #define LastLoginUserPSW @"LastLoginPSW"
 #define LastLoginUserID @"LastLoginUserID"
+
+typedef NS_ENUM(NSUInteger, Itemtype) {
+    ItemtypeSingle,
+    ItemtypeDouble,
+};
+
 #endif /* DCItemSetAll_h */

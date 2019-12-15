@@ -7,6 +7,7 @@
 //
 
 #import "DCDatiTitlemSubCell.h"
+#import "DCKaoDianModel.h"
 
 @implementation DCDatiTitlemSubCell
 
@@ -17,29 +18,35 @@
     _chooseBtn.layer.borderColor = KMainColor.CGColor;
     _chooseBtn.layer.cornerRadius = 15;
     _chooseBtn.layer.masksToBounds = true;
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-    if (animated) {
-        _chooseBtn.backgroundColor = KMainColor;
-    }else{
-        _chooseBtn.backgroundColor = [UIColor whiteColor];
-    }
-    
+    _chooseBtn.userInteractionEnabled = false;
 }
 
 + (instancetype)cellWithTableView:(UITableView *)tableView{
    
     DCDatiTitlemSubCell *cell = [tableView dequeueReusableCellWithIdentifier:DCDatiTitlemSubCellId];
     if (nil == cell) {
-    
         cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:self options:nil] firstObject];
     }
     cell.contentView.backgroundColor = [UIColor whiteColor];
     return cell;
 }
+
+- (void)setModel:(DCKaoDianOptionsListModel *)model {
+    _model = model;
+    [self updateUI];
+}
+
+- (void)updateUI {
+    [_chooseBtn setTitle:_model.opname forState:UIControlStateNormal];
+    _titleL.text = _model.opvalue;
+    if (_model.isSelect) {
+        _chooseBtn.backgroundColor = KMainColor;
+        [_chooseBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    }else{
+        _chooseBtn.backgroundColor = [UIColor whiteColor];
+         [_chooseBtn setTitleColor:KMainColor forState:UIControlStateNormal];
+    }
+}
+
 
 @end

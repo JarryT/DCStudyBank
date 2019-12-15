@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DCKaoDianTestVC : YABaseViewController
-@property(nonatomic,strong)NSString *itemtype;
+@property(nonatomic,assign)Itemtype itemtype;
 @end
 
 NS_ASSUME_NONNULL_END

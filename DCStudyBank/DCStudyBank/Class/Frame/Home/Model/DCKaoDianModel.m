@@ -22,6 +22,26 @@
     
 }
 
+- (Itemtype)type {
+    //只有两个选项
+    if ([_itemtype isEqualToString: @"单选"]) {
+        return ItemtypeSingle;
+    } else {
+        return ItemtypeDouble;
+    }
+}
+
+- (BOOL)isSelected {
+    return self.selectedOptionsList.count > 0;
+}
+
+- (NSMutableArray *)selectedOptionsList {
+    if (!_selectedOptionsList) {
+        _selectedOptionsList = [NSMutableArray array];
+    }
+    return  _selectedOptionsList;
+}
+
 - (NSString *)isZhengQue{
     if (!_isZhengQue) {
         _isZhengQue = @"2";
