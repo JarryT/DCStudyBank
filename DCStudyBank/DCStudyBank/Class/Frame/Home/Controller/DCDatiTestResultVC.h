@@ -7,11 +7,13 @@
 //
 
 #import "YABaseViewController.h"
+#import "DCKaoDianModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DCDatiTestResultVC : YABaseViewController
-@property(nonatomic,strong)NSArray *reultList;
+@property(nonatomic,strong)NSArray<DCKaoDianObjModel *> *list;
+
 @end
 
 NS_ASSUME_NONNULL_END

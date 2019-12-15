@@ -10,6 +10,9 @@
 #import "DCDatiTestResultVC.h"
 #import "DCKaoDianModel.h"
 
+//添加联系记录
+#define DddErrorItemsPath @"itemController/addErrorItems"
+
 @interface DCDatiKaVC ()
 @property (weak, nonatomic) IBOutlet UIView *conetView;
 @property(nonatomic,strong)UIScrollView *scrllV;
@@ -130,18 +133,23 @@
     
     NSMutableDictionary *exerReport = [NSMutableDictionary dictionary];
     exerReport[@"exername"] = _keMuName;
-    exerReport[@"exertime"] = @"100";
+    //exerReport[@"exertime"] = @"100";
     exerReport[@"exercount"] = [NSString stringWithFormat:@"%lu",(unsigned long)_list.count];
     NSString *count = [NSString stringWithFormat:@"%d", collectCount];
     exerReport[@"exeraccuracy"] = [NSString stringWithFormat:@"%.2f", count.floatValue/_list.count];
     exerReport[@"isaccomplish"] = (completeCount == _list.count) ? @"完成" : @"未完成";
     exerReport[@"corid"] = _keMuId;
 
-    NSDictionary *info = @{@"exerReport": exerReport, @"erroritems": erroritems};
+    NSDictionary *info = @{@"exerReport": [exerReport mj_JSONString], @"erroritems": [erroritems mj_JSONString]};
 
+    weakSelf(self)
+    [DCNetworkingRequest requestWithURLString:DddErrorItemsPath params:info method:POST withMappingObject:@"DCNetworkingReultModel" success:^(id  _Nonnull responseObject) {
+        DCDatiTestResultVC *vc = [[DCDatiTestResultVC alloc] init];
+        vc.list = weakSelf.list;
+        [self.navigationController pushViewController:vc animated:YES];
+    } fail:^(NSError * _Nonnull error, NSString * _Nonnull errorDescription) {
 
-    DCDatiTestResultVC *vc = [[DCDatiTestResultVC alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    }];
 }
 
 @end
