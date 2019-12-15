@@ -146,6 +146,9 @@
         if (responseObject.code == 200) {
             if (responseObject.obj.count > 0) {
                 weakSelf.kaoDianList = responseObject.obj;
+                for (DCKaoDianObjModel *model in weakSelf.kaoDianList) {
+                    model.cellType = KaoDianCellTypeNormal;
+                }
                 weakSelf.kotiStatus.text = type;
                 weakSelf.kaotiNum.text = [NSString stringWithFormat:@"1/%lu",(unsigned long)weakSelf.kaoDianList.count];
                 weakSelf.colletM = weakSelf.kaoDianList.firstObject;

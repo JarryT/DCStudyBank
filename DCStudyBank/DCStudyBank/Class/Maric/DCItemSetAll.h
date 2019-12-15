@@ -110,4 +110,10 @@ typedef NS_ENUM(NSUInteger, Itemtype) {
     ItemtypeDouble,
 };
 
+typedef NS_ENUM(NSUInteger, KaoDianCellType) {
+    KaoDianCellTypeNormal = 0,
+    KaoDianCellTypeAll,
+    KaoDianCellTypeError,
+};
+
 #endif /* DCItemSetAll_h */

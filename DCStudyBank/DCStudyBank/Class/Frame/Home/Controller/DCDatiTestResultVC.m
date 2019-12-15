@@ -149,12 +149,24 @@
     vc.keMuName = _keMuName;
     vc.keMuId = _keMuId;
     vc.kaoDianList = _list;
+    for (DCKaoDianObjModel *model in vc.kaoDianList) {
+        model.cellType = KaoDianCellTypeAll;
+    }
     [self.navigationController pushViewController:vc animated:true];
 }
 
 //查看错误
 - (IBAction)cheackWrongBtnClick:(UIButton *)sender {
-
+    DCKaoDianTestVC *vc = [[DCKaoDianTestVC alloc] init];
+    vc.isAllCheck = true;
+    vc.itemtype = _itemtype;
+    vc.keMuName = _keMuName;
+    vc.keMuId = _keMuId;
+    vc.kaoDianList = _list;
+    for (DCKaoDianObjModel *model in vc.kaoDianList) {
+        model.cellType = KaoDianCellTypeError;
+    }
+    [self.navigationController pushViewController:vc animated:true];
 }
 
 @end

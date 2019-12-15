@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)NSString *keMuId;
 @property(nonatomic,strong)NSString *keMuName;
 
-@property(nonatomic,assign)BOOL isAllCheck;//是否为全部解析
+@property(nonatomic,assign)BOOL isAllCheck;//是否为解析
 @end
 
 NS_ASSUME_NONNULL_END

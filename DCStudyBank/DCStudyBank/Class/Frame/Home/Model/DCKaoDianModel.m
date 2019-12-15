@@ -61,6 +61,13 @@
     return false;
 }
 
+- (CGFloat)footerHeight {
+    if (!_footerHeight) {
+        _footerHeight = [self.itemjiexi boundingRectWithSize:CGSizeMake(KScreenWidth - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:nil context:nil].size.height + 125;
+    }
+    return _footerHeight;
+}
+
 - (NSMutableArray *)selectedOptionsList {
     if (!_selectedOptionsList) {
         _selectedOptionsList = [NSMutableArray array];
@@ -68,12 +75,6 @@
     return  _selectedOptionsList;
 }
 
-- (NSString *)isZhengQue{
-    if (!_isZhengQue) {
-        _isZhengQue = @"2";
-    }
-    return _isZhengQue;
-}
 - (NSString *)userAnwer{
     if (!_userAnwer) {
         _userAnwer = @"";

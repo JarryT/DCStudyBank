@@ -9,6 +9,8 @@
 #import "DCDaTiItemCell.h"
 #import "DCKaoDianModel.h"
 #import "DCDatiTitlemSubCell.h"
+#import "DCDatiSectionFooter.h"
+
 @interface DCDaTiItemCell()<UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -17,8 +19,12 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+
     self.tabV.delegate = self;
     self.tabV.dataSource = self;
+    self.tabV.estimatedRowHeight = 100;
+    self.tabV.estimatedSectionFooterHeight = 100;
+    self.tabV.rowHeight = UITableViewAutomaticDimension;
 }
 
 
@@ -47,8 +53,18 @@
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 50;
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    if (_KaoDianModel.cellType != KaoDianCellTypeNormal) {
+        DCDatiSectionFooter *footer = [[DCDatiSectionFooter alloc] init];
+        footer.answerTextLabel.text = [NSString stringWithFormat:@"本题答案: %@", _KaoDianModel.itemresult];
+        footer.jieXiTextLabel.text = _KaoDianModel.itemjiexi;
+        return footer;
+    }
+    return [UIView new];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return _KaoDianModel.footerHeight;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

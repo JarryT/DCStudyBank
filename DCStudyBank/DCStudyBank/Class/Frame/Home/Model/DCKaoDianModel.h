@@ -37,12 +37,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)NSMutableArray<DCKaoDianOptionsListModel *> *selectedOptionsList;//选择的数组
 @property(nonatomic,strong)NSString *subid;
 @property(nonatomic,assign)BOOL isCollect;
-@property(nonatomic,strong)NSString *isZhengQue; //0错误，1正确，2未答题
 @property(nonatomic,strong)NSString *userAnwer;
 
+@property(nonatomic,assign)KaoDianCellType cellType;
+@property(nonatomic,assign)CGFloat footerHeight;
 - (Itemtype)type;
 - (BOOL)isSelected;
 - (BOOL)isAnswerCorrect;
+
 @end
 
 @interface DCKaoDianOptionsListModel : NSObject
