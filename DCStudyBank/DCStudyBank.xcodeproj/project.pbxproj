@@ -96,7 +96,6 @@
 		04904C31238EAE9200DA65D0 /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04904C23238EAE9200DA65D0 /* NSObject+MJClass.m */; };
 		04904C32238EAE9200DA65D0 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04904C24238EAE9200DA65D0 /* NSString+MJExtension.m */; };
 		04904C33238EAE9200DA65D0 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 04904C25238EAE9200DA65D0 /* MJPropertyKey.m */; };
-		04904C34238EAE9200DA65D0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04904C29238EAE9200DA65D0 /* Info.plist */; };
 		04904C35238EAE9200DA65D0 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04904C2A238EAE9200DA65D0 /* MJFoundation.m */; };
 		04904C59238EB32000DA65D0 /* DCChooseTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04904C57238EB32000DA65D0 /* DCChooseTestCell.m */; };
 		04904C5A238EB32000DA65D0 /* DCChooseTestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04904C58238EB32000DA65D0 /* DCChooseTestCell.xib */; };
@@ -153,6 +152,8 @@
 		04D4A12B23A4CEB300531160 /* DCDatiTitlemSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D4A12923A4CEB300531160 /* DCDatiTitlemSubCell.xib */; };
 		04D4A12E23A509A400531160 /* DCShowLiulanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4A12D23A509A400531160 /* DCShowLiulanView.m */; };
 		04D4A13023A509CF00531160 /* DCShowLiulanView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D4A12F23A509CF00531160 /* DCShowLiulanView.xib */; };
+		04D4A13323A610F200531160 /* DCZHenTIKaoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4A13223A610F200531160 /* DCZHenTIKaoModel.m */; };
+		04D4A13623A643C600531160 /* DCZhangJieListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D4A13523A643C600531160 /* DCZhangJieListModel.m */; };
 		04FE30DF238AB961008FA7DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FE30DD238AB961008FA7DD /* Main.storyboard */; };
 		04FE30E2238AB961008FA7DD /* DCStudyBank.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04FE30E0238AB961008FA7DD /* DCStudyBank.xcdatamodeld */; };
 		04FE30E4238AB965008FA7DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FE30E3238AB965008FA7DD /* Assets.xcassets */; };
@@ -333,7 +334,6 @@
 		04904C26238EAE9200DA65D0 /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
 		04904C27238EAE9200DA65D0 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
 		04904C28238EAE9200DA65D0 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
-		04904C29238EAE9200DA65D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04904C2A238EAE9200DA65D0 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
 		04904C56238EB32000DA65D0 /* DCChooseTestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCChooseTestCell.h; sourceTree = "<group>"; };
 		04904C57238EB32000DA65D0 /* DCChooseTestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCChooseTestCell.m; sourceTree = "<group>"; };
@@ -422,6 +422,10 @@
 		04D4A12C23A509A400531160 /* DCShowLiulanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCShowLiulanView.h; sourceTree = "<group>"; };
 		04D4A12D23A509A400531160 /* DCShowLiulanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCShowLiulanView.m; sourceTree = "<group>"; };
 		04D4A12F23A509CF00531160 /* DCShowLiulanView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCShowLiulanView.xib; sourceTree = "<group>"; };
+		04D4A13123A610F200531160 /* DCZHenTIKaoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCZHenTIKaoModel.h; sourceTree = "<group>"; };
+		04D4A13223A610F200531160 /* DCZHenTIKaoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCZHenTIKaoModel.m; sourceTree = "<group>"; };
+		04D4A13423A643C600531160 /* DCZhangJieListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCZhangJieListModel.h; sourceTree = "<group>"; };
+		04D4A13523A643C600531160 /* DCZhangJieListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCZhangJieListModel.m; sourceTree = "<group>"; };
 		04FE30D1238AB961008FA7DD /* DCStudyBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCStudyBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FE30DE238AB961008FA7DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04FE30E1238AB961008FA7DD /* DCStudyBank.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DCStudyBank.xcdatamodel; sourceTree = "<group>"; };
@@ -657,6 +661,10 @@
 				04D4A11D23A4918900531160 /* DCKaoShiProcessModel.m */,
 				04D4A11F23A4C4D600531160 /* DCKaoDianModel.h */,
 				04D4A12023A4C4D600531160 /* DCKaoDianModel.m */,
+				04D4A13123A610F200531160 /* DCZHenTIKaoModel.h */,
+				04D4A13223A610F200531160 /* DCZHenTIKaoModel.m */,
+				04D4A13423A643C600531160 /* DCZhangJieListModel.h */,
+				04D4A13523A643C600531160 /* DCZhangJieListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -711,7 +719,6 @@
 				04904C26238EAE9200DA65D0 /* MJProperty.h */,
 				04904C27238EAE9200DA65D0 /* NSObject+MJKeyValue.h */,
 				04904C28238EAE9200DA65D0 /* NSObject+MJCoding.h */,
-				04904C29238EAE9200DA65D0 /* Info.plist */,
 				04904C2A238EAE9200DA65D0 /* MJFoundation.m */,
 			);
 			path = MJExtension;
@@ -1261,7 +1268,6 @@
 				041406E72393E6C80034EED2 /* DCHomeCell.xib in Resources */,
 				04C3B6D0238D63570008B215 /* DCChooseCityView.xib in Resources */,
 				041315B62391680A00B123D3 /* DCMyUserHeaderView.xib in Resources */,
-				04904C34238EAE9200DA65D0 /* Info.plist in Resources */,
 				040091382397CFD8005E2DFF /* BRBaseNavgationView.xib in Resources */,
 				040F20BD239B51860046A248 /* DCStudyHistoryCell.xib in Resources */,
 				04C3B6A8238D61B70008B215 /* DCForgetPasswordVC.xib in Resources */,
@@ -1360,6 +1366,7 @@
 				04904C32238EAE9200DA65D0 /* NSString+MJExtension.m in Sources */,
 				041406F423941A0C0034EED2 /* DCMangerBtn.m in Sources */,
 				041406E62393E6C80034EED2 /* DCHomeCell.m in Sources */,
+				04D4A13323A610F200531160 /* DCZHenTIKaoModel.m in Sources */,
 				041406D423937A150034EED2 /* UIBaseViewController.m in Sources */,
 				040F2117239B95CC0046A248 /* DCCollectMainVC.m in Sources */,
 				041406DC2393D9350034EED2 /* DCHomeTableHeaderView.m in Sources */,
@@ -1413,6 +1420,7 @@
 				040F21DB239D37290046A248 /* DCDatiTestResultVC.m in Sources */,
 				043F20AC2395601F00D24817 /* DCStudyMoKaoVC.m in Sources */,
 				04904C2C238EAE9200DA65D0 /* NSObject+MJKeyValue.m in Sources */,
+				04D4A13623A643C600531160 /* DCZhangJieListModel.m in Sources */,
 				040F21CD239CB18D0046A248 /* YaydNSString+Util.m in Sources */,
 				04904C31238EAE9200DA65D0 /* NSObject+MJClass.m in Sources */,
 				04C3B6A3238D61B70008B215 /* DCForgetPasswordVC.m in Sources */,

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 static NSString *DCHomeCellId = @"DCHomeCellId";
-@class DCHomeGroupModel;
+@class DCHomeGroupModel,DCZhangJieObjModel;
 @protocol DCHomeCellDelegate <NSObject>
 - (void)editeStudyInfo:(NSString *)studyId;
 @end
@@ -25,6 +25,7 @@ static NSString *DCHomeCellId = @"DCHomeCellId";
 @property(nonatomic,strong)DCHomeGroupModel *dataM;
 
 @property(nonatomic,weak)id<DCHomeCellDelegate>delegate;
+
 @end
 
 NS_ASSUME_NONNULL_END

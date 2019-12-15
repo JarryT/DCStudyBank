@@ -97,6 +97,10 @@
 #define AddCollectPath @"collectController/deleteCollect/"
 //取消收藏
 #define DeleteCollectPath @"collectController/deleteCollect/"
+//真题模考
+#define ZTMoKaoListPath @"itemController/queryMZ"
+//章节练习
+#define ZHangJiePath @"itemController/queryItemList"
 //保存用户****************卢金
 #define UserHeaderIconPlaceholderImage [UIImage imageNamed:@"my_head_icon"]
 ///保存用户登录数据路径

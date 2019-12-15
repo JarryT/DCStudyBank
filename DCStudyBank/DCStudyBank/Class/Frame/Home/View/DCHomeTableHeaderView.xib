@@ -22,7 +22,10 @@
                             <state key="normal" image="index_pot_icon"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="建设工程项目的组织与管理" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wj5-eb-caU">
-                            <rect key="frame" x="40" y="20.5" width="172" height="17"/>
+                            <rect key="frame" x="40" y="20.5" width="250" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="250" id="Etw-Ye-AhX"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>

@@ -8,6 +8,8 @@
 
 #import "DCHomeTableHeaderView.h"
 #import "DCHomeListDataModel.h"
+#import "DCZhangJieListModel.h"
+
 @interface DCHomeTableHeaderView()
 @property (weak, nonatomic) IBOutlet UIButton *buyBtn;
 @property (weak, nonatomic) IBOutlet UILabel *currentLable;
@@ -61,6 +63,26 @@
        
 }
 
+
+- (void)setZhangjieModel:(DCZhangJieObjModel *)zhangjieModel{
+    _zhangjieModel = zhangjieModel;
+    
+     _titleName.text = zhangjieModel.itemname;
+     _currentLable.text = [NSString stringWithFormat:@"%@/%@",zhangjieModel.itemcount,zhangjieModel.itemcount];
+       if (zhangjieModel.isOpen) {
+           [_imageBtn setImage:[UIImage imageNamed:@"index_pot_a_icon"] forState:UIControlStateNormal];
+           if (self.type == 1) {
+                [_editeBtn setImage:[UIImage imageNamed:@"list_open_icon"] forState:UIControlStateNormal];
+           }
+           _seprtView.hidden = NO;
+       }else{
+           [_imageBtn setImage:[UIImage imageNamed:@"index_pot_icon"] forState:UIControlStateNormal];
+           if (self.type == 1) {
+               [_editeBtn setImage:[UIImage imageNamed:@"list_close_icon"] forState:UIControlStateNormal];
+           }
+           _seprtView.hidden = YES;
+       }
+}
 
 - (void)setType:(NSInteger)type{
     _type = type;
