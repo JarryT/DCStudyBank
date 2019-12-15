@@ -8,6 +8,8 @@
 
 #import "DCStudyHistoryVC.h"
 #import "DCStudyHistoryCell.h"
+#import "DCKaoDianModel.h"
+
 @interface DCStudyHistoryVC ()<UITableViewDelegate,UITableViewDataSource>{
     NSInteger currentIndex;//当前选中的
 }
@@ -50,7 +52,30 @@
     self.tabV.delegate = self;
   
 }
+//获取试题列表
+- (void)getKaoDianListData{
+    weakSelf(self);
+    [DCNetworkingRequest postString:AllResultQueryPath params:@{@"errresult":@"",@"":@""} withMappingObject:@"DCKaoDianModel" success:^(DCKaoDianModel *responseObject) {
+        if (responseObject.code == 200) {
+            if (responseObject.obj.count > 0) {
+                NSMutableArray *array = [NSMutableArray array];
+                for (int i = 0; i < responseObject.obj.count; i ++) {
+                    DCKaoDianObjModel *info = responseObject.obj[i];
+                    if (info.itemtype) {
+                        if (info.itemtype.length > 0) {
+                            [array addObject:info];
+                        }
+                    }
+                }
 
+            }
+        }else{
+            [MBProgressHUD showError:responseObject.msg];
+        }
+    } fail:^(NSError * _Nonnull error, NSString * _Nonnull errorDescription) {
+
+    }];
+}
 - (IBAction)nofinshBtnClick:(UIButton *)sender {
     weakSelf(self);
     if (currentIndex == sender.tag)return;

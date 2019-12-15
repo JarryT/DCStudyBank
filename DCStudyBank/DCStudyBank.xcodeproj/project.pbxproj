@@ -174,6 +174,14 @@
 		04FE3138238AB980008FA7DD /* XYNotificationConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE3121238AB980008FA7DD /* XYNotificationConst.m */; };
 		04FE3139238AB980008FA7DD /* SYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE3124238AB980008FA7DD /* SYButton.m */; };
 		04FE313A238AB980008FA7DD /* XYCustomSting.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE3126238AB980008FA7DD /* XYCustomSting.m */; };
+		939E2D7D23A60E62002B463C /* DCCollectSingleSelectedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E2D7B23A60E62002B463C /* DCCollectSingleSelectedTableViewCell.m */; };
+		939E2D7E23A60E62002B463C /* DCCollectSingleSelectedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 939E2D7C23A60E62002B463C /* DCCollectSingleSelectedTableViewCell.xib */; };
+		939E2D8223A62121002B463C /* DCCollectAnswerListItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E2D8023A62121002B463C /* DCCollectAnswerListItemTableViewCell.m */; };
+		939E2D8323A62121002B463C /* DCCollectAnswerListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 939E2D8123A62121002B463C /* DCCollectAnswerListItemTableViewCell.xib */; };
+		939E2D8623A62CD1002B463C /* DCItemToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E2D8523A62CD1002B463C /* DCItemToolView.m */; };
+		939E2D8923A6425C002B463C /* DCErrorListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E2D8823A6425C002B463C /* DCErrorListViewController.m */; };
+		939E2D8D23A64341002B463C /* FCGroupChatInfoTextItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E2D8B23A64340002B463C /* FCGroupChatInfoTextItemTableViewCell.m */; };
+		939E2D8E23A64341002B463C /* FCGroupChatInfoTextItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 939E2D8C23A64341002B463C /* FCGroupChatInfoTextItemTableViewCell.xib */; };
 		A61E85119F0504818A644BDD /* Pods_DCStudyBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94105C556EB95D62FA702E26 /* Pods_DCStudyBank.framework */; };
 		DF9EA23823A643A200617B6D /* DCDatiSectionFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9EA23723A643A200617B6D /* DCDatiSectionFooter.m */; };
 /* End PBXBuildFile section */
@@ -468,6 +476,19 @@
 		04FE3126238AB980008FA7DD /* XYCustomSting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCustomSting.m; sourceTree = "<group>"; };
 		4EDFDCC8D65756C4EDB7ACF8 /* Pods-DCStudyBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCStudyBank.release.xcconfig"; path = "Target Support Files/Pods-DCStudyBank/Pods-DCStudyBank.release.xcconfig"; sourceTree = "<group>"; };
 		6C6DBD49808A17F0F8694207 /* Pods-DCStudyBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCStudyBank.debug.xcconfig"; path = "Target Support Files/Pods-DCStudyBank/Pods-DCStudyBank.debug.xcconfig"; sourceTree = "<group>"; };
+		939E2D7A23A60E62002B463C /* DCCollectSingleSelectedTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCCollectSingleSelectedTableViewCell.h; sourceTree = "<group>"; };
+		939E2D7B23A60E62002B463C /* DCCollectSingleSelectedTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCCollectSingleSelectedTableViewCell.m; sourceTree = "<group>"; };
+		939E2D7C23A60E62002B463C /* DCCollectSingleSelectedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCCollectSingleSelectedTableViewCell.xib; sourceTree = "<group>"; };
+		939E2D7F23A62121002B463C /* DCCollectAnswerListItemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCCollectAnswerListItemTableViewCell.h; sourceTree = "<group>"; };
+		939E2D8023A62121002B463C /* DCCollectAnswerListItemTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCCollectAnswerListItemTableViewCell.m; sourceTree = "<group>"; };
+		939E2D8123A62121002B463C /* DCCollectAnswerListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCCollectAnswerListItemTableViewCell.xib; sourceTree = "<group>"; };
+		939E2D8423A62CD1002B463C /* DCItemToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCItemToolView.h; sourceTree = "<group>"; };
+		939E2D8523A62CD1002B463C /* DCItemToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCItemToolView.m; sourceTree = "<group>"; };
+		939E2D8723A6425C002B463C /* DCErrorListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCErrorListViewController.h; sourceTree = "<group>"; };
+		939E2D8823A6425C002B463C /* DCErrorListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCErrorListViewController.m; sourceTree = "<group>"; };
+		939E2D8A23A64340002B463C /* FCGroupChatInfoTextItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCGroupChatInfoTextItemTableViewCell.h; sourceTree = "<group>"; };
+		939E2D8B23A64340002B463C /* FCGroupChatInfoTextItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCGroupChatInfoTextItemTableViewCell.m; sourceTree = "<group>"; };
+		939E2D8C23A64341002B463C /* FCGroupChatInfoTextItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FCGroupChatInfoTextItemTableViewCell.xib; sourceTree = "<group>"; };
 		94105C556EB95D62FA702E26 /* Pods_DCStudyBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DCStudyBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9EA23623A643A200617B6D /* DCDatiSectionFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCDatiSectionFooter.h; sourceTree = "<group>"; };
 		DF9EA23723A643A200617B6D /* DCDatiSectionFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCDatiSectionFooter.m; sourceTree = "<group>"; };
@@ -528,6 +549,9 @@
 		040F20E3239B79200046A248 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				939E2D8A23A64340002B463C /* FCGroupChatInfoTextItemTableViewCell.h */,
+				939E2D8B23A64340002B463C /* FCGroupChatInfoTextItemTableViewCell.m */,
+				939E2D8C23A64341002B463C /* FCGroupChatInfoTextItemTableViewCell.xib */,
 				040F20EA239B7C510046A248 /* DCWrongTestHeaderView.h */,
 				040F20EB239B7C510046A248 /* DCWrongTestHeaderView.m */,
 			);
@@ -545,6 +569,8 @@
 				040F210B239B913A0046A248 /* DCWrongCategoryVC.h */,
 				040F210C239B913A0046A248 /* DCWrongCategoryVC.m */,
 				040F210D239B913A0046A248 /* DCWrongCategoryVC.xib */,
+				939E2D8723A6425C002B463C /* DCErrorListViewController.h */,
+				939E2D8823A6425C002B463C /* DCErrorListViewController.m */,
 			);
 			path = Contorller;
 			sourceTree = "<group>";
@@ -552,9 +578,9 @@
 		040F2110239B95A90046A248 /* Collect(收藏) */ = {
 			isa = PBXGroup;
 			children = (
+				939E2D7923A60E49002B463C /* Model */,
+				939E2D7823A60E3D002B463C /* View */,
 				040F2111239B95A90046A248 /* Controller */,
-				040F2112239B95A90046A248 /* Model */,
-				040F2113239B95A90046A248 /* View */,
 			);
 			name = "Collect(收藏)";
 			path = "DCStudyBank/Class/Frame/Home/Collect(收藏)";
@@ -574,20 +600,6 @@
 				040F2120239B97580046A248 /* DCCollectionCategoryVC.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		040F2112239B95A90046A248 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		040F2113239B95A90046A248 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		040F215F239BE8430046A248 /* RequestManger */ = {
@@ -1179,6 +1191,27 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		939E2D7823A60E3D002B463C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				939E2D7A23A60E62002B463C /* DCCollectSingleSelectedTableViewCell.h */,
+				939E2D7B23A60E62002B463C /* DCCollectSingleSelectedTableViewCell.m */,
+				939E2D7C23A60E62002B463C /* DCCollectSingleSelectedTableViewCell.xib */,
+				939E2D7F23A62121002B463C /* DCCollectAnswerListItemTableViewCell.h */,
+				939E2D8023A62121002B463C /* DCCollectAnswerListItemTableViewCell.m */,
+				939E2D8123A62121002B463C /* DCCollectAnswerListItemTableViewCell.xib */,
+				939E2D8423A62CD1002B463C /* DCItemToolView.h */,
+				939E2D8523A62CD1002B463C /* DCItemToolView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		939E2D7923A60E49002B463C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+        };
 		DF9EA23523A6153500617B6D /* Timer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1256,6 +1289,7 @@
 				04B2AC5C2392600200A48758 /* DCAboutMyVC.xib in Resources */,
 				041406F1239414A60034EED2 /* DCHomeTopMangerCell.xib in Resources */,
 				04D4A13023A509CF00531160 /* DCShowLiulanView.xib in Resources */,
+				939E2D7E23A60E62002B463C /* DCCollectSingleSelectedTableViewCell.xib in Resources */,
 				044DDBBF2396B25F00050AC4 /* DCStudyMoKaoCell.xib in Resources */,
 				040F210F239B913A0046A248 /* DCWrongCategoryVC.xib in Resources */,
 				040F2118239B95CC0046A248 /* DCCollectMainVC.xib in Resources */,
@@ -1269,6 +1303,7 @@
 				04C3B6B4238D61FB0008B215 /* DCHomeVC.xib in Resources */,
 				040F211D239B97430046A248 /* DCNewCollectionVC.xib in Resources */,
 				04C3B6AE238D61B70008B215 /* DCLoginViewController.xib in Resources */,
+				939E2D8323A62121002B463C /* DCCollectAnswerListItemTableViewCell.xib in Resources */,
 				04FE30E7238AB965008FA7DD /* LaunchScreen.storyboard in Resources */,
 				04FE30E4238AB965008FA7DD /* Assets.xcassets in Resources */,
 				04C3B6AD238D61B70008B215 /* DCRegistrationInfoVC.xib in Resources */,
@@ -1278,6 +1313,7 @@
 				04FE30DF238AB961008FA7DD /* Main.storyboard in Resources */,
 				040F2122239B97580046A248 /* DCCollectionCategoryVC.xib in Resources */,
 				04C3B6CA238D62F80008B215 /* DCFindVC.xib in Resources */,
+				939E2D8E23A64341002B463C /* FCGroupChatInfoTextItemTableViewCell.xib in Resources */,
 				041406E72393E6C80034EED2 /* DCHomeCell.xib in Resources */,
 				04C3B6D0238D63570008B215 /* DCChooseCityView.xib in Resources */,
 				041315B62391680A00B123D3 /* DCMyUserHeaderView.xib in Resources */,
@@ -1405,6 +1441,7 @@
 				040F20E8239B79740046A248 /* DCWrongTestVC.m in Sources */,
 				04D4A07E23A270FF00531160 /* DCHomeKeMuModel.m in Sources */,
 				040F2140239BCAB10046A248 /* DCNetworkingReultModel.m in Sources */,
+				939E2D8D23A64341002B463C /* FCGroupChatInfoTextItemTableViewCell.m in Sources */,
 				041406D123937A150034EED2 /* UIBaseModel.m in Sources */,
 				041406D523937A150034EED2 /* UIBaseTableViewCell.m in Sources */,
 				04904C30238EAE9200DA65D0 /* NSObject+MJProperty.m in Sources */,
@@ -1413,11 +1450,13 @@
 				04904C35238EAE9200DA65D0 /* MJFoundation.m in Sources */,
 				044DDB752396993200050AC4 /* DCNetworkingRequest.m in Sources */,
 				04C3B6A9238D61B70008B215 /* DCRegistrationInfoVC.m in Sources */,
+				939E2D8223A62121002B463C /* DCCollectAnswerListItemTableViewCell.m in Sources */,
 				040F210E239B913A0046A248 /* DCWrongCategoryVC.m in Sources */,
 				040F20DF239B771C0046A248 /* FSSegmentTitleView.m in Sources */,
 				044DDBB42396A9ED00050AC4 /* DCBaseNetworkingModel.m in Sources */,
 				04C3B6CB238D62F80008B215 /* DCFindVC.m in Sources */,
 				04C3B6EF238D7BDA0008B215 /* DCStudySubjectMangerVC.m in Sources */,
+				939E2D8623A62CD1002B463C /* DCItemToolView.m in Sources */,
 				04904C59238EB32000DA65D0 /* DCChooseTestCell.m in Sources */,
 				04C3B6A7238D61B70008B215 /* DCChooseAddress.m in Sources */,
 				04FE3139238AB980008FA7DD /* SYButton.m in Sources */,
@@ -1433,6 +1472,7 @@
 				041406D323937A150034EED2 /* JMBaseWebView.m in Sources */,
 				040F21DB239D37290046A248 /* DCDatiTestResultVC.m in Sources */,
 				043F20AC2395601F00D24817 /* DCStudyMoKaoVC.m in Sources */,
+				939E2D8923A6425C002B463C /* DCErrorListViewController.m in Sources */,
 				04904C2C238EAE9200DA65D0 /* NSObject+MJKeyValue.m in Sources */,
 				04D4A13623A643C600531160 /* DCZhangJieListModel.m in Sources */,
 				040F21CD239CB18D0046A248 /* YaydNSString+Util.m in Sources */,
@@ -1440,6 +1480,7 @@
 				04C3B6A3238D61B70008B215 /* DCForgetPasswordVC.m in Sources */,
 				040F20EC239B7C510046A248 /* DCWrongTestHeaderView.m in Sources */,
 				04D4A12523A4C9E700531160 /* DCDaTiItemCell.m in Sources */,
+				939E2D7D23A60E62002B463C /* DCCollectSingleSelectedTableViewCell.m in Sources */,
 				04FE3132238AB980008FA7DD /* UIImage+XYSWTool.m in Sources */,
 				040F210A239B91110046A248 /* DCNewWrongVC.m in Sources */,
 				04C3B6AB238D61B70008B215 /* DCLoginViewController.m in Sources */,

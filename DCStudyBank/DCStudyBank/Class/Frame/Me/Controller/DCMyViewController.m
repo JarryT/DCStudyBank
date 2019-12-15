@@ -18,6 +18,7 @@
 #import "DCCollectMainVC.h"
 #import "DCStudyHistoryVC.h"
 #import "DCJiHuoCenterVC.h"
+#import "DCErrorListViewController.h"
 @interface DCMyViewController ()
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 
@@ -126,7 +127,7 @@
             [self.navigationController pushViewController:vc animated:YES];
         }break;
         case 1:{//错题
-            DCWrongTestVC *vc = [DCWrongTestVC new];
+            DCErrorListViewController *vc = [DCErrorListViewController new];
             [self.navigationController pushViewController:vc animated:YES];
         }break;
         case 2:{//历史

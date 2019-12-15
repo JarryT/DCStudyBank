@@ -175,7 +175,7 @@
     if (self.colletM.isCollect) {
         url = DeleteCollectPath;
     }
-    [DCNetworkingRequest requestWithURLString:url params:@{@"itemid":self.colletM.itemid} method:POST withMappingObject:@"DCNetworkingReultModel" success:^(DCNetworkingReultModel *responseObject) {
+    [DCNetworkingRequest requestWithURLString:url params:@{@"itemId":self.colletM.itemid} method:POST withMappingObject:@"DCNetworkingReultModel" success:^(DCNetworkingReultModel *responseObject) {
         if (responseObject.code == 200) {
             weakSelf.colletM.isCollect = true;
             weakSelf.collection.selected = weakSelf.colletM.isCollect;

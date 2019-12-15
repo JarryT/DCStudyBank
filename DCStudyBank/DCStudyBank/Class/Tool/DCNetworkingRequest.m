@@ -19,7 +19,49 @@
     });
     return request;
 }
++ (void)postString:(NSString *)URLString params:(NSDictionary *)params withMappingObject:(NSString*)className success:(void (^)(id responseObject))sucessBlock
+    fail:(void (^)(NSError *error, NSString *errorDescription))failBlock
+{
+    //无网络
+    if ([Reachability reachabilityForInternetConnection].isReachable) {
+        AFHTTPSessionManager *session = [[DCNetworkingRequest share] sessionManager];
+        //header
+        NSDictionary *headers = [[DCNetworkingRequest share] headerWithParams:params];
+        for (NSString *key in headers) {
+            [session.requestSerializer setValue:headers[key] forHTTPHeaderField:key];
+        }
+        NSString *urlString = [ServerAddressURL stringByAppendingString:URLString];
+        NSString *paramString = @"";
+        if (params.count > 0) {
+            paramString = [params mj_JSONString];
+            [session.requestSerializer setQueryStringSerializationWithBlock:^NSString *(NSURLRequest *request, NSDictionary *parameters, NSError *__autoreleasing *error) {
+                return paramString;
+            }];
+        }
+        [session POST:urlString parameters:paramString progress:^(NSProgress * _Nonnull uploadProgress) {
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                //处理成功请求
+            NSError *error = nil;
+            NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves | NSJSONReadingAllowFragments|NSJSONReadingMutableContainers error:&error];
 
+            NSLog(@"--url=%@-%@--%@",task.currentRequest.URL.absoluteString,jsonObject,[jsonObject objectSafeKey:@"msg"]);
+            if (className) {
+                id c = [NSClassFromString(className) mj_objectWithKeyValues:responseObject];
+                if (sucessBlock) {
+                     sucessBlock(c);
+                }
+            }else{
+               if (sucessBlock){ sucessBlock(jsonObject); };
+            }
+           
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (failBlock){ failBlock(error,error.localizedDescription); };
+        }];
+    }else{
+        [DCNetworkingRequest share].shouldStop = false;
+        if (failBlock){ failBlock(nil, NetworkingErrorDescription);};
+    }
+}
 + (void)requestWithURLString:(NSString *)URLString params:(NSDictionary *)params method:(HTTPMethod)method withMappingObject:(NSString*)className success:(void (^)(id responseObject))sucessBlock
    fail:(void (^)(NSError *error, NSString *errorDescription))failBlock{
     

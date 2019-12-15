@@ -103,9 +103,13 @@
         lastBtn = btn;
                    
     }
+    
+    
+    
     singleBgView.frame = CGRectMake(0, lab.bottom + 5, KScreenWidth, number * 50);
 
     _conetH = singleBgView.bottom + 5;
+    _scrllV.contentSize = CGSizeMake(KScreenWidth, _conetH);
     
 }
 //确认提交

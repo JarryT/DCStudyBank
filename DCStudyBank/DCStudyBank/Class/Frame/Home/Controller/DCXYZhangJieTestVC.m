@@ -47,6 +47,7 @@
     _latView.bounds = self.view.bounds;
     _latView.btnBlock = ^(NSString * _Nonnull content, NSInteger index) {
         [weakSelf setInitWith:content index:index];
+        [weakSelf showLatview];
     };
     [self.view addSubview:_latView];
     [self initWithZhangjieList];

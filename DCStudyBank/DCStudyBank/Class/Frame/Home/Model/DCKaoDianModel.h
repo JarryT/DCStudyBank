@@ -39,6 +39,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)BOOL isCollect;
 @property(nonatomic,strong)NSString *userAnwer;
 
+//收藏列表的时间
+@property (nonatomic, copy) NSString * colldate;
+//收藏的高
+@property (nonatomic, assign) CGFloat height;
+
 @property(nonatomic,assign)KaoDianCellType cellType;
 @property(nonatomic,assign)CGFloat footerHeight;
 - (Itemtype)type;
@@ -54,7 +59,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)NSString *opname;
 @property(nonatomic,strong)NSString *oppoint;
 @property(nonatomic,strong)NSString *opvalue;
-
 @end
 
 NS_ASSUME_NONNULL_END

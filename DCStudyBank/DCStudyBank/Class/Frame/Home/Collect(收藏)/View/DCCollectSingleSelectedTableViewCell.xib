@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="222" id="KGk-i7-Jjw" customClass="DCCollectSingleSelectedTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="225"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="225"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tw5-Ah-gTt">
+                        <rect key="frame" x="20" y="15" width="30.5" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iS-Ml-5PU">
+                        <rect key="frame" x="20" y="37" width="370" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGN-Bd-fEP">
+                        <rect key="frame" x="20" y="193" width="30.5" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xGN-Bd-fEP" firstAttribute="leading" secondItem="5iS-Ml-5PU" secondAttribute="leading" id="6Q8-ym-R4k"/>
+                    <constraint firstItem="tw5-Ah-gTt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="CI2-Uq-bkd"/>
+                    <constraint firstItem="5iS-Ml-5PU" firstAttribute="top" secondItem="tw5-Ah-gTt" secondAttribute="bottom" constant="5" id="HZf-yd-cUu"/>
+                    <constraint firstItem="5iS-Ml-5PU" firstAttribute="leading" secondItem="tw5-Ah-gTt" secondAttribute="leading" id="Nid-TD-dRK"/>
+                    <constraint firstAttribute="trailing" secondItem="5iS-Ml-5PU" secondAttribute="trailing" constant="10" id="Q4o-mQ-gEb"/>
+                    <constraint firstItem="tw5-Ah-gTt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Sho-bc-pXS"/>
+                    <constraint firstAttribute="bottom" secondItem="xGN-Bd-fEP" secondAttribute="bottom" constant="15" id="np0-ir-TVd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="nameLabel" destination="5iS-Ml-5PU" id="NF3-zH-IlZ"/>
+                <outlet property="timeLabel" destination="xGN-Bd-fEP" id="yPc-fA-xN6"/>
+                <outlet property="titleLabel" destination="tw5-Ah-gTt" id="rhB-uX-exC"/>
+            </connections>
+            <point key="canvasLocation" x="84.057971014492765" y="22.433035714285712"/>
+        </tableViewCell>
+    </objects>
+</document>

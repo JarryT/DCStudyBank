@@ -44,7 +44,9 @@
     [self.statusView changeTag:0];
     self.statusView.selectIndex = 0;
     _vc1 = [DCNewWrongVC new];
+    _vc1.item = _item;
     _vc2 = [DCWrongCategoryVC new];
+    _vc2.item = _item;
     self.pageContentView = [[FSPageContentView alloc]initWithFrame:CGRectMake(0,kTopHeight,KScreenWidth,KScreenHeight-kTopHeight) childVCs:@[_vc1,_vc2] parentVC:self delegate:self];
       
     [self.view addSubview:_pageContentView];

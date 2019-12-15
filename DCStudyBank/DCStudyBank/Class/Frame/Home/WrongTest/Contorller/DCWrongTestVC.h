@@ -7,11 +7,12 @@
 //
 
 #import "YABaseViewController.h"
+#import "DCHomeKeMuModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DCWrongTestVC : YABaseViewController
-
+@property (nonatomic, strong) DCkemuListModel *item;
 @end
 
 NS_ASSUME_NONNULL_END
