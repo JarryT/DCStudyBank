@@ -86,15 +86,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DCKaoDianObjModel *info = _dataArray[indexPath.section];
-    if ([info.itemtype isEqualToString:@"单选"]) {
+    //单选的判断
+    if ([info.itemtype isEqualToString:@"单选"] || [info.itemtype isEqualToString:@"多选"]) {
         DCCollectSingleSelectedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DCCollectSingleSelectedTableViewCell" forIndexPath:indexPath];
         [cell configWithModel:info];
         return cell;
-    }else if([info.itemtype isEqualToString:@""] || !info.itemtype){
+    }
+    //问答题的判断
+    else if([info.itemtype isEqualToString:@"问答"] || !info.itemtype){
         DCCollectSingleSelectedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DCCollectSingleSelectedTableViewCell" forIndexPath:indexPath];
         [cell configWithModel:info];
         return cell;
     }else{
+        //非单选多选问答并且存在的类型，会崩溃,按照类型自行处理
         return nil;
     }
 }

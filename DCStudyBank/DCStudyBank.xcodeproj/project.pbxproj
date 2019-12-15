@@ -176,6 +176,10 @@
 		939E2D7E23A60E62002B463C /* DCCollectSingleSelectedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 939E2D7C23A60E62002B463C /* DCCollectSingleSelectedTableViewCell.xib */; };
 		939E2D8223A62121002B463C /* DCCollectAnswerListItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E2D8023A62121002B463C /* DCCollectAnswerListItemTableViewCell.m */; };
 		939E2D8323A62121002B463C /* DCCollectAnswerListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 939E2D8123A62121002B463C /* DCCollectAnswerListItemTableViewCell.xib */; };
+		939E2D8623A62CD1002B463C /* DCItemToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E2D8523A62CD1002B463C /* DCItemToolView.m */; };
+		939E2D8923A6425C002B463C /* DCErrorListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E2D8823A6425C002B463C /* DCErrorListViewController.m */; };
+		939E2D8D23A64341002B463C /* FCGroupChatInfoTextItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E2D8B23A64340002B463C /* FCGroupChatInfoTextItemTableViewCell.m */; };
+		939E2D8E23A64341002B463C /* FCGroupChatInfoTextItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 939E2D8C23A64341002B463C /* FCGroupChatInfoTextItemTableViewCell.xib */; };
 		A61E85119F0504818A644BDD /* Pods_DCStudyBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94105C556EB95D62FA702E26 /* Pods_DCStudyBank.framework */; };
 /* End PBXBuildFile section */
 
@@ -471,6 +475,13 @@
 		939E2D7F23A62121002B463C /* DCCollectAnswerListItemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCCollectAnswerListItemTableViewCell.h; sourceTree = "<group>"; };
 		939E2D8023A62121002B463C /* DCCollectAnswerListItemTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCCollectAnswerListItemTableViewCell.m; sourceTree = "<group>"; };
 		939E2D8123A62121002B463C /* DCCollectAnswerListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCCollectAnswerListItemTableViewCell.xib; sourceTree = "<group>"; };
+		939E2D8423A62CD1002B463C /* DCItemToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCItemToolView.h; sourceTree = "<group>"; };
+		939E2D8523A62CD1002B463C /* DCItemToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCItemToolView.m; sourceTree = "<group>"; };
+		939E2D8723A6425C002B463C /* DCErrorListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCErrorListViewController.h; sourceTree = "<group>"; };
+		939E2D8823A6425C002B463C /* DCErrorListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCErrorListViewController.m; sourceTree = "<group>"; };
+		939E2D8A23A64340002B463C /* FCGroupChatInfoTextItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCGroupChatInfoTextItemTableViewCell.h; sourceTree = "<group>"; };
+		939E2D8B23A64340002B463C /* FCGroupChatInfoTextItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCGroupChatInfoTextItemTableViewCell.m; sourceTree = "<group>"; };
+		939E2D8C23A64341002B463C /* FCGroupChatInfoTextItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FCGroupChatInfoTextItemTableViewCell.xib; sourceTree = "<group>"; };
 		94105C556EB95D62FA702E26 /* Pods_DCStudyBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DCStudyBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -529,6 +540,9 @@
 		040F20E3239B79200046A248 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				939E2D8A23A64340002B463C /* FCGroupChatInfoTextItemTableViewCell.h */,
+				939E2D8B23A64340002B463C /* FCGroupChatInfoTextItemTableViewCell.m */,
+				939E2D8C23A64341002B463C /* FCGroupChatInfoTextItemTableViewCell.xib */,
 				040F20EA239B7C510046A248 /* DCWrongTestHeaderView.h */,
 				040F20EB239B7C510046A248 /* DCWrongTestHeaderView.m */,
 			);
@@ -546,6 +560,8 @@
 				040F210B239B913A0046A248 /* DCWrongCategoryVC.h */,
 				040F210C239B913A0046A248 /* DCWrongCategoryVC.m */,
 				040F210D239B913A0046A248 /* DCWrongCategoryVC.xib */,
+				939E2D8723A6425C002B463C /* DCErrorListViewController.h */,
+				939E2D8823A6425C002B463C /* DCErrorListViewController.m */,
 			);
 			path = Contorller;
 			sourceTree = "<group>";
@@ -1168,6 +1184,8 @@
 				939E2D7F23A62121002B463C /* DCCollectAnswerListItemTableViewCell.h */,
 				939E2D8023A62121002B463C /* DCCollectAnswerListItemTableViewCell.m */,
 				939E2D8123A62121002B463C /* DCCollectAnswerListItemTableViewCell.xib */,
+				939E2D8423A62CD1002B463C /* DCItemToolView.h */,
+				939E2D8523A62CD1002B463C /* DCItemToolView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1273,6 +1291,7 @@
 				04FE30DF238AB961008FA7DD /* Main.storyboard in Resources */,
 				040F2122239B97580046A248 /* DCCollectionCategoryVC.xib in Resources */,
 				04C3B6CA238D62F80008B215 /* DCFindVC.xib in Resources */,
+				939E2D8E23A64341002B463C /* FCGroupChatInfoTextItemTableViewCell.xib in Resources */,
 				041406E72393E6C80034EED2 /* DCHomeCell.xib in Resources */,
 				04C3B6D0238D63570008B215 /* DCChooseCityView.xib in Resources */,
 				041315B62391680A00B123D3 /* DCMyUserHeaderView.xib in Resources */,
@@ -1399,6 +1418,7 @@
 				040F20E8239B79740046A248 /* DCWrongTestVC.m in Sources */,
 				04D4A07E23A270FF00531160 /* DCHomeKeMuModel.m in Sources */,
 				040F2140239BCAB10046A248 /* DCNetworkingReultModel.m in Sources */,
+				939E2D8D23A64341002B463C /* FCGroupChatInfoTextItemTableViewCell.m in Sources */,
 				041406D123937A150034EED2 /* UIBaseModel.m in Sources */,
 				041406D523937A150034EED2 /* UIBaseTableViewCell.m in Sources */,
 				04904C30238EAE9200DA65D0 /* NSObject+MJProperty.m in Sources */,
@@ -1412,6 +1432,7 @@
 				044DDBB42396A9ED00050AC4 /* DCBaseNetworkingModel.m in Sources */,
 				04C3B6CB238D62F80008B215 /* DCFindVC.m in Sources */,
 				04C3B6EF238D7BDA0008B215 /* DCStudySubjectMangerVC.m in Sources */,
+				939E2D8623A62CD1002B463C /* DCItemToolView.m in Sources */,
 				04904C59238EB32000DA65D0 /* DCChooseTestCell.m in Sources */,
 				04C3B6A7238D61B70008B215 /* DCChooseAddress.m in Sources */,
 				04FE3139238AB980008FA7DD /* SYButton.m in Sources */,
@@ -1427,6 +1448,7 @@
 				041406D323937A150034EED2 /* JMBaseWebView.m in Sources */,
 				040F21DB239D37290046A248 /* DCDatiTestResultVC.m in Sources */,
 				043F20AC2395601F00D24817 /* DCStudyMoKaoVC.m in Sources */,
+				939E2D8923A6425C002B463C /* DCErrorListViewController.m in Sources */,
 				04904C2C238EAE9200DA65D0 /* NSObject+MJKeyValue.m in Sources */,
 				040F21CD239CB18D0046A248 /* YaydNSString+Util.m in Sources */,
 				04904C31238EAE9200DA65D0 /* NSObject+MJClass.m in Sources */,

@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DCItemToolView : UIView
-
+- (instancetype)initWithFrame:(CGRect)frame items:(NSArray *)array result:(void(^)(int type))result;
 @end
 
 NS_ASSUME_NONNULL_END

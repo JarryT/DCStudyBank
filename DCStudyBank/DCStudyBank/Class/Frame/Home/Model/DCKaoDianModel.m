@@ -44,9 +44,22 @@
     if (_height == 0) {
         UILabel *label = [[UILabel alloc] init];
         label.font = PF_R_Font(14);
+        NSString *content = @"";
+        CGFloat oriHeight = 0;
+        //赋值单选多选的标题计算cell高度
+        if ([_itemtype isEqualToString:@"单选"] || [_itemtype isEqualToString:@"多选"]) {
+            content = _itemname;
+            oriHeight = 160 - 88 + _optionsList.count * 22;
+        }
+        //赋值简答题的标题 计算cell高度
+        if ([_itemtype isEqualToString:@"问答"]) {
+            content = _itemname;
+            oriHeight = 73;
+        }
         label.text = _itemname;
         CGSize size = [label sizeThatFits:CGSizeMake(KScreenWidth - 30, MAXFLOAT)];
-        _height = size.height + 160;
+        _height = oriHeight + size.height;
+        
     }
     return _height;
 }

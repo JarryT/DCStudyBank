@@ -18,11 +18,17 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 - (void)updateWithInfo:(NSDictionary *)info
 {
     _leftLabel.text = [info objectSafeKey:@"left"];
     _rightLabel.text = [info objectSafeKey:@"right"];
+}
+- (void)configWithModel:(DCkemuListModel *)model
+{
+    _leftLabel.text = model.subname;
+    _rightLabel.text = @"";
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
